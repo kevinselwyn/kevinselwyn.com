@@ -10,10 +10,10 @@
   "scripts": {
     "dev": "hugo serve --buildDrafts --port 1234",
     "serve": "cd public && python -m SimpleHTTPServer 1234",
-    "build": "yarn run build:hugo && yarn run build:html && yarn run build:xml",
-    "build:hugo": "hugo",
-    "build:html": "find public -name '*.html' -exec html-minifier --collapse-whitespace --minify-css inline {} --output {} \\;",
-    "build:xml": "find public -name '*.xml' -exec html-minifier --collapse-whitespace --minify-css inline {} --output {} \\;",
+    "build": "hugo",
+    "package": "yarn run package:html && yarn run package:xml",
+    "package:html": "find public -name '*.html' -exec html-minifier --collapse-whitespace --minify-css inline {} --output {} \\;",
+    "package:xml": "find public -name '*.xml' -exec html-minifier --collapse-whitespace --minify-css inline {} --output {} \\;",
     "deploy": "./deploy.sh"
   },
   "dependencies": {
