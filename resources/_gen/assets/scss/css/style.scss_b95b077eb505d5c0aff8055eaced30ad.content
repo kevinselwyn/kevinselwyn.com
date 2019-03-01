@@ -1,0 +1,1 @@
+article a{color:inherit}article a:hover{color:teal}article .img--left{max-width:50%;padding:0 1em 1em 0;float:left}

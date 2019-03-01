@@ -1,0 +1,28 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Kevin Selwyn"
+theme = "flex"
+
+[params]
+footer = ""
+
+[menu]
+[[menu.nav]]
+name = "About"
+url = "about/"
+weight = 1
+
+[[menu.nav]]
+name = "Posts"
+url = "posts/"
+weight = 2
+
+[[menu.nav]]
+name = "Tags"
+url = "tags/"
+weight = 3
+
+[[menu.nav]]
+name = "Categories"
+url = "categories/"
+weight = 4

@@ -1,0 +1,17 @@
+article {
+    a {
+        color:inherit;
+
+        &:hover {
+            color:teal;
+        }
+    }
+
+    .img {
+        &--left {
+            max-width:50%;
+            padding:0 1em 1em 0;
+            float:left;
+        }
+    }
+}
