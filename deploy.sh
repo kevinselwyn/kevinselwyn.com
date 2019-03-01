@@ -16,7 +16,7 @@ git add .
 git commit -m "AUTO-GENERATING: `date -u +%Y-%m-%dT%H:%M:%S%z`"
 
 # push
-git push origin master
+git push -f origin master
 
 # return
 cd ..

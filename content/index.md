@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Home"
 ---
 
 <img src="/img/kevin.jpg" title="Kevin" alt="Kevin" class="img img--left" />
