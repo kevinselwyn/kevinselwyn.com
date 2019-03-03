@@ -12,8 +12,8 @@
     "serve": "cd public && python -m SimpleHTTPServer 1234",
     "build": "hugo",
     "package": "yarn run package:html && yarn run package:xml",
-    "package:html": "find public -name '*.html' -exec html-minifier --collapse-whitespace --minify-css inline {} --output {} \\;",
-    "package:xml": "find public -name '*.xml' -exec html-minifier --collapse-whitespace --minify-css inline {} --output {} \\;",
+    "package:html": "find public -name '*.html' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
+    "package:xml": "find public -name '*.xml' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
     "deploy": "./deploy.sh"
   },
   "dependencies": {
