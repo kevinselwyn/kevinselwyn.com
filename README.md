@@ -10,6 +10,12 @@ Clone this repo:
 git clone --recursive https://github.com/kevinselwyn/kevinselwyn.com
 ```
 
+Clone the github.io repo:
+
+```bash
+git clone https://github.com/kevinselwyn/kevinselwyn.github.io public
+```
+
 Install Hugo & Yarn:
 
 ```bash

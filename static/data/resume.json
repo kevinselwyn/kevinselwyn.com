@@ -1,0 +1,117 @@
+{
+    "data": {
+        "info": {
+            "name": "Kevin Selwyn",
+            "title": "Frontend Engineer",
+            "email": "kevinselwyn@gmail.com",
+            "website": "https://kevinselwyn.com",
+            "profile": "Kevin is a highly motivated self-starter with 8+ years of professional web development experience. He has a tenacious drive to learn and make the web better.",
+            "interests": "Kevin is passionate about music, The Legend of Zelda, and Corgis."
+        },
+        "social": [
+            {
+                "network": "github",
+                "url": "https://github.com/kevinselwyn"
+            },
+            {
+                "network": "linkedin",
+                "url": "https://www.linkedin.com/in/kevinselwyn/"
+            },
+            {
+                "network": "facebook",
+                "url": "https://www.facebook.com/KevinSelwyn"
+            },
+            {
+                "network": "youtube",
+                "url": "https://www.youtube.com/channel/UCkh-Uavq2a-Sbfxw3rJQS8A"
+            }
+        ],
+        "employment": [
+            {
+                "employer": "Amper Music",
+                "title": "frontend engineer",
+                "start": "2016",
+                "end": "present",
+                "description": [
+                    "Re-architecting a legacy React app",
+                    "Testing, consuming, and documenting public and internal web APIs"
+                ]
+            },
+            {
+                "employer": "Penguin Random House",
+                "title": "web developer",
+                "start": "2014",
+                "end": "2016",
+                "description": [
+                    "Maintaining and improving an enterprise-level website",
+                    "Coordinating large, regularly scheduled HTML email blasts"
+                ]
+            },
+            {
+                "employer": "TSL Marketing",
+                "title": "sr. web developer",
+                "start": "2012",
+                "end": "2014",
+                "description": [
+                    "Developing websites, blogs, landing pages, and HTML emails for clients in the technology sector",
+                    "Working from Photoshop files to build HTML documents using HTML/PHP, CSS, and Javascript",
+                    "Performing SEO keyword research and optimization",
+                    "Training clients on proper use, care, and customization of their website or blog",
+                    "Adjusting creative quickly and efficiently in real time for client approval",
+                    "Aiding in the fulfillment of dimensional mail campaigns (postage, shipping)"
+                ]
+            },
+            {
+                "employer": "Freelance",
+                "title": "freelance web developer",
+                "start": "2010",
+                "end": "2012",
+                "description": [
+                    "Created and maintained websites in a timely fashion"
+                ]
+            }
+        ],
+        "education": [
+            {
+                "school": "Shenandoah Conservatory",
+                "start": "2006",
+                "end": "2010",
+                "degree": "bachelor of fine arts in musical theatre"
+            },
+            {
+                "school": "Urbana High School",
+                "start": "2002",
+                "end": "2006",
+                "degree": "high school diploma"
+            }
+        ],
+        "skills": [
+            {
+                "level": "expert",
+                "skills": [
+                    "JavaScript/Node.js",
+                    "React",
+                    "GraphQL",
+                    "SASS",
+                    "Unix"
+                ]
+            },
+            {
+                "level": "intermediate",
+                "skills": [
+                    "Adobe Creative Suite",
+                    "Python",
+                    "C",
+                    "6502 Assembly"
+                ]
+            },
+            {
+                "level": "novice",
+                "skills": [
+                    "Functional Programming",
+                    "Machine Learning"
+                ]
+            }
+        ]
+    }
+}
