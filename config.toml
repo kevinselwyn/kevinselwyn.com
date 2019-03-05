@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "Kevin Selwyn"
 theme = "flex"
 
+pygmentsCodefences = true
+pygmentsUseClassic = false
+pygmentsUseClasses = true
+
 [params]
 footer = ""
 
