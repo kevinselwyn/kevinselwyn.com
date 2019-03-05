@@ -8,4 +8,4 @@ I'm Kevin. I'm a Frontend Engineer.
 
 Here you will find random musings. Consume at your own risk.
 
-Check out my [resume](/resume/) or [blog posts](/posts/).
+Check out my [resume](/resume/) or [blog posts](/posts/index.html).

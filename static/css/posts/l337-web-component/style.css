@@ -1,0 +1,12 @@
+.l337-5p34k input, .l337-5p34k l337-5p34k {
+    width:100%;
+    padding:0.5em;
+    font-size:1em;
+    outline:0;
+    display:block;
+    box-sizing:border-box;
+}
+
+.l337-5p34k input {
+    border:1px solid lightgray;
+}
