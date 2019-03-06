@@ -1,5 +1,6 @@
 ---
 title: "Home"
+description: "I'm Kevin. I'm a Frontend Engineer."
 ---
 
 <img src="/img/kevin.jpg" title="Kevin" alt="Kevin" class="img img--left" />
