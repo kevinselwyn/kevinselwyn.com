@@ -1,0 +1,408 @@
+@import  "http://fonts.googleapis.com/css?family=Squada+One";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+    display:block;
+}
+
+body{
+    line-height:1;
+}
+
+ol, ul{
+    list-style:none;
+}
+
+blockquote, q{
+    quotes:none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+    content:'';
+    content:none;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+.clearfix{
+    width:100%;
+    height:0;
+    display:block;
+    clear:both;
+}
+
+.clearfix:before, .clearfix:after{
+    content:'';
+    line-height:0;
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+
+/* ******************** *\
+    $BODY
+\* ******************** */
+body{
+    margin:0 0 10px;
+    padding:0 0 20px;
+    color:#000;
+    font:16px Helvetica, Arial, Sans-Serif; /* 14px/20px */
+    background:#fff;
+}
+
+body section{
+    width:100%;
+    max-width:50em; /* 800px; */
+    margin:0 auto;
+    padding:10px 0;
+    clear:both;
+    position:relative;
+}
+
+body section .content{
+    position:relative;
+}
+
+body section#intro{
+    padding-bottom:0;
+}
+
+body section#intro p{
+    padding:10px 0 0;
+    font-style:italic;
+    display:none;
+}
+
+body section#intro p a{
+    text-decoration:underline;
+}
+
+/* ******************** *\
+    $TEXT
+\* ******************** */
+h1{
+    font:60px/64px "Squada One", Helvetica, Arial, Sans-Serif;
+}
+
+h2{
+    font:20px/24px "Lucida Grande", Helvetica, Arial, Sans-Serif;
+}
+
+p, ul, li{
+    font:13px/16px Helvetica, Arial, Sans-Serif; /* 14px/20px */
+}
+
+ul{
+    padding:10px 0 10px 20px;
+    list-style:none;
+}
+
+ul li{
+    padding:0 0 6px;
+    position:relative;
+}
+
+ul li:before{
+    width:0;
+    height:0;
+    left:-10px;
+    top:4px;
+    content:"";
+    border-top:4px solid #000;
+    border-right:4px solid transparent;
+    display:block;
+    position:absolute;
+}
+
+small{
+    font-size:11px;
+}
+
+strong{
+    font-weight:700;
+}
+
+em{
+    font-style:italic;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* ******************** *\
+    $TITLE
+\* ******************** */
+.title{
+    width:18.75%; /* 150px; */
+    border-top:4px solid #3f3f3f;
+    float:left;
+    position:relative;
+}
+
+.title h2{
+    padding:0 0 0 10px;
+    font-family:"Squada One", "Helvetica", Arial, Sans-Serif;
+}
+
+.title img{
+    width:100%;
+    max-width:200px;
+    margin:-4px 0;
+}
+
+.title:before{
+    width:0;
+    height:0;
+    left:0;
+    top:0;
+    content:"";
+    border-top:4px solid #000;
+    border-right:4px solid transparent;
+    position:absolute;
+}
+
+/* ******************** *\
+    $CONTENT
+\* ******************** */
+.content{
+    width:75%;
+    padding:9px 0 0;
+    border-top:1px solid #3f3f3f;
+    float:right;
+}
+
+/* ******************** *\
+    $SOCIAL
+\* ******************** */
+.social{
+    padding:16px 0 0;
+    list-style:none;
+    display:inline-block;
+}
+
+.social li{
+    width:40px;
+    height:40px;
+    margin:0 6px 10px 0;
+    padding:0;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    background:#6d6d6d;
+    display:block;
+    overflow:hidden;
+    float:left;
+}
+
+.social li:before{
+    display:none;
+}
+
+.social li:hover{
+    background-color:#000;
+}
+
+.social li a{
+    width:inherit;
+    height:inherit;
+    font:0/0 Arial, Arial, Sans-Serif;
+    text-indent:-9999px;
+    background:transparent url('data:image/png;base64,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') no-repeat 0 0;
+    display:block;
+}
+
+.social li.twitter a{
+    background-position:0 0;
+}
+
+.social li.facebook a{
+    background-position:-40px 0;
+}
+
+.social li.linkedin a{
+    background-position:-80px 0;
+}
+
+.social li.youtube a{
+    background-position:-120px 0;
+}
+
+.social li.gplus a{
+    background-position:-160px 0;
+}
+
+.social li.github a{
+    background-position:-200px 0;
+}
+
+.social li a img{
+    width:inherit;
+    height:inherit;
+    display:none;
+}
+
+/* ******************** *\
+    $PROGRESS
+\* ******************** */
+.progress{
+    width:50%;
+    height:10px;
+    margin:10px 0 20px;
+    border:3px solid #000;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+
+.progress .experience{
+    width:25%;
+    height:inherit;
+    -webkit-border-top-left-radius:10px;
+    -moz-border-top-left-radius:10px;
+    border-top-left-radius:10px;
+    -webkit-border-bottom-left-radius:10px;
+    -moz-border-bottom-left-radius:10px;
+    border-bottom-left-radius:10px;
+    background:#ccc;
+    position:relative;
+}
+
+.progress .experience:after{
+    width:0;
+    height:0;
+    right:-10px;
+    border-top:10px solid #ccc;
+    border-right:10px solid transparent;
+    content:"";
+    position:absolute;
+}
+
+.progress.expert .experience{
+    width:75%;
+}
+
+.progress.intermediate .experience{
+    width:50%;
+}
+
+.progress.novice .experience{
+    width:25%;
+}
+
+/* ******************** *\
+    $RESPONSIVE
+\* ******************** */
+@media all and (max-width:800px){
+    body section{
+        margin:0 16px;
+    }
+}
+
+@media all and (max-width:480px){
+    body section{
+        width:auto;
+    }
+
+    body section .title{
+        width:100%;
+        float:none;
+    }
+
+    body section .content{
+        width:100%;
+        float:none;
+    }
+
+    body section#intro{
+        text-align:center;
+    }
+
+    body section#intro .title, body section#intro .content{
+        border:none;
+    }
+
+    body section#intro .title:before, body section#intro .content:before{
+        display:none;
+    }
+}
+
+/* ******************** *\
+    $PRINT
+\* ******************** */
+@media print{
+    body section{
+        padding:10px 0 0;
+    }
+
+    body section .content{
+        width:79%;
+    }
+
+    #intro .title{
+        display:none;
+    }
+
+    #intro .content{
+        width:100%;
+    }
+
+    #intro .content h1, #intro .content h2{
+        width:50%;
+        float:left;
+        clear:left;
+    }
+
+    #intro .content h1{
+        font-size:40px;
+        line-height:44px;
+    }
+
+    #intro .content p{
+        width:50%;
+        float:left;
+        clear:left;
+        display:block;
+    }
+
+    .social{
+        right:10px;
+        top:0;
+        position:absolute;
+}
+
+    .social li{
+        width:24px;
+        height:24px;
+    }
+
+    #skills p{
+        margin-bottom:8px;
+    }
+
+    .social li a img{
+        display:block;
+    }
+
+    .progress{
+        display:none;
+    }
+}

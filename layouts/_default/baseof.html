@@ -4,41 +4,19 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    {{ .Site.Title }}
-    {{ if eq .Title .Site.Title }}
-    {{ .Site.Title }}
-    {{ else }}
-    {{ with .Title }} | {{ . }}{{ end }}
-    {{ end }}
-  </title>
-  {{ if .Description }}
-  <meta name="description" content="{{ .Description }}" />
-  {{ end }}
-  <meta property="og:title" content="{{ .Site.Title }}{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }} | {{ . }}{{ end }}{{ end }}" />
-  {{ if .Description }}
-  <meta property="og:description" content="{{ .Description }}" />
-  {{ end }}
-  {{ if .Params.image }}
-  <meta property="og:image" content="{{ .Params.image }}" />
-  {{ end }}
-  {{ range .AlternativeOutputFormats }}
-  {{ printf "<link rel=%q type=%q href=%q title=%q>" .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
-  {{ end }}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ partial "head.html" . }}
   {{ $style := resources.Get "css/style.scss" | resources.ToCSS | resources.Minify }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+  {{ partial "head-css.html" . }}
   <style>
-    {{ partialCached "critical.css" . | safeCSS }}
-    {{ range (.Scratch.Get "css" | uniq) }}
-    {{ partial . | safeCSS }}
-    {{ end }}
+  {{ partialCached "critical.css" . | safeCSS }}
   </style>
   {{ .Hugo.Generator }}
 </head>
 <body>
-  {{ partial "banner.html" .}}
+  {{ partial "banner.html" . }}
   <main class="u-expand">
     <div class="u-wrapper">
       <div class="u-padding">
@@ -47,12 +25,8 @@
     </div>
   </main>
   {{ partial "footer.html" . }}
-  {{ range (.Scratch.Get "js" | uniq) }}
-  <script>
-    {{ partial . | safeJS }}
-  </script>
-  {{ end }}
   {{ $js := resources.Get "js/bundle.js" | resources.Minify }}
   <script src="{{ $js.Permalink }}"></script>
+  {{ partial "tail.html" . }}
 </body>
 </html>

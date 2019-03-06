@@ -4,6 +4,8 @@ description: "Creating a Custom Element that translates text into l337 5p34k"
 date: 2019-03-05T09:34:16-05:00
 categories: ["javascript"]
 tags: ["web-components"]
+css: ["/css/posts/l337-web-component/style.css"]
+js: ["/js/posts/l337-web-component/bundle.js", "/js/posts/l337-web-component/l337-5p34k.js"]
 ---
 
 Let's make a <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Web Component</a> that transforms the text inside to <a href="https://en.wikipedia.org/wiki/Leet" target="_blank">l337 5p34k</a>.
@@ -13,9 +15,6 @@ Here's a working example. Type to translate to l337 5p34k:
 <div class="l337-5p34k">
     <input type="text" placeholder="The quick red fox jumps over the lazy brown dog." />
     <l337-5p34k>The quick red fox jumps over the lazy brown dog.</l337-5p34k>
-    <link rel="stylesheet" type="text/css" href="/css/posts/l337-web-component/style.css" />
-    <script src="/js/posts/l337-web-component/bundle.js"></script>
-    <script src="/js/posts/l337-web-component/l337-5p34k.js"></script>
 </div>
 
 Starting with the implementation, this is what we want the markup to look like:

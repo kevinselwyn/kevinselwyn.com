@@ -1,0 +1,18 @@
+<title>
+{{ .Site.Title }}
+{{ if eq .Title .Site.Title }}
+{{ .Site.Title }}
+{{ else }}
+{{ with .Title }} | {{ . }}{{ end }}
+{{ end }}
+</title>
+{{ if .Description }}
+<meta name="description" content="{{ .Description }}" />
+{{ end }}
+<meta property="og:title" content="{{ .Site.Title }}{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }} | {{ . }}{{ end }}{{ end }}" />
+{{ if .Description }}
+<meta property="og:description" content="{{ .Description }}" />
+{{ end }}
+{{ if .Params.image }}
+<meta property="og:image" content="{{ .Params.image }}" />
+{{ end }}
