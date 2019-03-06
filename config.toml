@@ -8,6 +8,7 @@ pygmentsUseClassic = false
 pygmentsUseClasses = true
 
 [params]
+gaTrackingCode = "UA-23140413-1"
 footer = ""
 
 [menu]
