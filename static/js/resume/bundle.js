@@ -1,11 +1,15 @@
-var app = function (data) {
-    var el = redom.el;
-    var mount = redom.mount;
+(function () {
+    var el = React.createElement;
+    var Fragment = React.Fragment;
+    var useEffect = React.useEffect;
+    var useState = React.useState;
+    var root = document.querySelector('#root');
 
-    mount(document.body, el('div', {
-        id: 'root'
-    }, [
-        el('section', {
+    var Intro = function (props) {
+        var info = props.info;
+        var social = props.social;
+
+        return el('section', {
             id: 'intro'
         }, [
             el('div', {
@@ -13,15 +17,15 @@ var app = function (data) {
             }, [
                 el('img', {
                     src: '/img/kevin.jpg',
-                    alt: data.info.name,
-                    title: data.info.name
+                    alt: info.name,
+                    title: info.name
                 })
             ]),
             el('div', {
                 className: 'content'
             }, [
-                el('h1', null, data.info.name),
-                el('h2', null, data.info.title),
+                el('h1', null, info.name),
+                el('h2', null, info.title),
                 el('p', null, [
                     '(Full resume at ',
                     el('a', {
@@ -31,7 +35,7 @@ var app = function (data) {
                 ]),
                 el('ul', {
                     className: 'social'
-                }, data.social.map(function (social) {
+                }, social.map(function (social) {
                     return el('li', {
                         className: social.network
                     }, [
@@ -45,8 +49,13 @@ var app = function (data) {
             el('div', {
                 className: 'clearfix'
             })
-        ]),
-        el('section', {
+        ]);
+    };
+
+    var Contact = function (props) {
+        var info = props.info;
+
+        return el('section', {
             id: 'contact'
         }, [
             el('div', {
@@ -61,21 +70,26 @@ var app = function (data) {
                     el('strong', null, 'Email:'),
                     ' ',
                     el('a', {
-                        href: 'mailto:' + data.info.email
-                    }, data.info.email),
+                        href: 'mailto:' + info.email
+                    }, info.email),
                     el('br'),
                     el('strong', null, 'Website:'),
                     ' ',
                     el('a', {
-                        href: data.info.website
-                    }, data.info.website)
+                        href: info.website
+                    }, info.website)
                 ])
             ]),
             el('div', {
                 className: 'clearfix'
             })
-        ]),
-        el('section', {
+        ]);
+    };
+
+    var Profile = function (props) {
+        var info = props.info;
+
+        return el('section', {
             id: 'profile'
         }, [
             el('div', {
@@ -86,13 +100,18 @@ var app = function (data) {
             el('div', {
                 className: 'content'
             }, [
-                el('p', null, data.info.profile)
+                el('p', null, info.profile)
             ]),
             el('div', {
                 className: 'clearfix'
             })
-        ]),
-        el('section', {
+        ]);
+    };
+
+    var Employment = function (props) {
+        var employment = props.employment;
+
+        return el('section', {
             id: 'employment'
         }, [
             el('div', {
@@ -102,18 +121,18 @@ var app = function (data) {
             ]),
             el('div', {
                 className: 'content'
-            }, data.employment.map(function (employment) {
-                return el('div', null, [
+            }, employment.map(function (item) {
+                return el(Fragment, null, [
                     el('p', null, [
-                        el('strong', null, employment.employer),
+                        el('strong', null, item.employer),
                         ' ',
-                        el('em', null, employment.start + ' - ' + employment.end),
+                        el('em', null, item.start + ' - ' + item.end),
                         el('br'),
-                        el('small', employment.title)
+                        el('small', null, item.title)
                     ]),
                     el('br'),
                     el('p', null, 'Reponsibilities included:'),
-                    el('ul', employment.description.map(function (description) {
+                    el('ul', null, item.description.map(function (description) {
                         return el('li', null, description);
                     }))
                 ]);
@@ -121,8 +140,13 @@ var app = function (data) {
             el('div', {
                 className: 'clearfix'
             })
-        ]),
-        el('section', {
+        ]);
+    };
+
+    var Education = function (props) {
+        var education = props.education;
+
+        return el('section', {
             id: 'education'
         }, [
             el('div', {
@@ -132,13 +156,13 @@ var app = function (data) {
             ]),
             el('div', {
                 className: 'content'
-            }, data.education.map(function (education) {
+            }, education.map(function (item) {
                 return el('p', null, [
-                    el('strong', null, education.school),
+                    el('strong', null, item.school),
                     ' ',
-                    el('em', null, education.start + ' - ' + education.end),
+                    el('em', null, item.start + ' - ' + item.end),
                     el('br'),
-                    el('em', null, education.degree),
+                    el('em', null, item.degree),
                     el('br'),
                     el('br')
                 ]);
@@ -146,8 +170,13 @@ var app = function (data) {
             el('div', {
                 className: 'clearfix'
             })
-        ]),
-        el('section', {
+        ]);
+    };
+
+    var Skills = function (props) {
+        var skills = props.skills;
+
+        return el('section', {
             id: 'skills'
         }, [
             el('div', {
@@ -157,15 +186,15 @@ var app = function (data) {
             ]),
             el('div', {
                 className: 'content'
-            }, data.skills.map(function (skill) {
-                return el('div', null, [
+            }, skills.map(function (item) {
+                return el(Fragment, null, [
                     el('p', null, [
-                        el('strong', null, skill.skills.join(', ')),
+                        el('strong', null, item.skills.join(', ')),
                         ' ',
-                        el('em', null, skill.level)
+                        el('em', null, item.level)
                     ]),
                     el('div', {
-                        className: 'progress ' + skill.level
+                        className: 'progress ' + item.level
                     }, [
                         el('div', {
                             className: 'experience'
@@ -176,8 +205,13 @@ var app = function (data) {
             el('div', {
                 className: 'clearfix'
             })
-        ]),
-        el('section', {
+        ]);
+    };
+
+    var Interests = function (props) {
+        var info = props.info;
+
+        return el('section', {
             id: 'interests'
         }, [
             el('div', {
@@ -188,21 +222,69 @@ var app = function (data) {
             el('div', {
                 className: 'content'
             }, [
-                el('p', null, data.info.interests)
+                el('p', null, info.interests)
             ]),
             el('div', {
                 className: 'clearfix'
             })
-        ])
-    ]), document.body.firstChild);
-};
+        ]);
+    };
 
-var xhr = new XMLHttpRequest();
+    var Resume = function (props) {
+        var _data = useState({
+            info: {},
+            social: [],
+            employment: [],
+            education: [],
+            skills: []
+        });
+        var data = _data[0];
+        var setData = _data[1];
+        var onStateLoad = function (e) {
+            setData(e.target.response.data);
+        };
 
-xhr.addEventListener('load', function () {
-    app(xhr.response.data);
-});
+        useEffect(function () {
+            var xhr = new XMLHttpRequest();
 
-xhr.open('GET', '/data/resume.json', true);
-xhr.responseType = 'json';
-xhr.send(null);
+            xhr.addEventListener('load', onStateLoad, true);
+
+            xhr.open('GET', props.url, true);
+            xhr.responseType = 'json';
+            xhr.send(null);
+
+            return function () {
+                xhr.removeEventListener('load', onStateLoad, true);
+            };
+        }, []);
+
+        return el(Fragment, null, [
+            el(Intro, {
+                info: data.info,
+                social: data.social
+            }),
+            el(Contact, {
+                info: data.info
+            }),
+            el(Profile, {
+                info: data.info
+            }),
+            el(Employment, {
+                employment: data.employment
+            }),
+            el(Education, {
+                education: data.education
+            }),
+            el(Skills, {
+                skills: data.skills
+            }),
+            el(Interests, {
+                info: data.info
+            })
+        ]);
+    };
+
+    ReactDOM.render(el(Resume, {
+        url: '/data/resume.json'
+    }), root);
+}());

@@ -11,12 +11,20 @@
     "dev": "hugo serve --buildDrafts --port 1234",
     "serve": "cd public && python -m SimpleHTTPServer 1234",
     "build": "hugo",
-    "package": "yarn run package:html && yarn run package:xml",
+    "package": "yarn run package:html && yarn run package:xml && yarn run package:js && yarn run package:css",
     "package:html": "find public -name '*.html' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
     "package:xml": "find public -name '*.xml' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
+    "package:js": "find public/js -name '*.js' ! -name \"react*\" -exec sh -c \"cat {} | babel --filename - | uglifyjs > {}.tmp && mv {}.tmp {}\" \\;",
+    "package:css": "find public/css -name '*.css' -exec sh -c \"cat {} | cssmin > {}.tmp && mv {}.tmp {}\" \\;",
     "deploy": "./deploy.sh"
   },
-  "dependencies": {
-    "html-minifier": "^3.5.21"
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "cssmin": "^0.4.3",
+    "html-minifier": "^3.5.21",
+    "uglify-js": "^3.4.9"
   }
 }

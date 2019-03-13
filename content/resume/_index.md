@@ -4,5 +4,5 @@ description: "Resume for Kevin Selwyn"
 type: "page"
 layout: "resume"
 css: ["/css/resume/style.css"]
-js: ["/js/resume/redom.min.js", "/js/resume/bundle.js"]
+js: ["/js/react/react-16.8.4.min.js", "/js/react/react-dom-16.8.4.min.js", "/js/resume/bundle.js"]
 ---
