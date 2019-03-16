@@ -14,7 +14,7 @@
     "package": "yarn run package:html && yarn run package:xml && yarn run package:js && yarn run package:css",
     "package:html": "find public -name '*.html' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
     "package:xml": "find public -name '*.xml' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
-    "package:js": "find public/js -name '*.js' ! -name \"react*\" -exec sh -c \"cat {} | babel --filename - | uglifyjs > {}.tmp && mv {}.tmp {}\" \\;",
+    "package:js": "find public/js -name '*.js' ! -name \"react-1*\" ! -name \"react-dom*\" -exec sh -c \"cat {} | babel --filename - | uglifyjs > {}.tmp && mv {}.tmp {}\" \\;",
     "package:css": "find public/css -name '*.css' -exec sh -c \"cat {} | cssmin > {}.tmp && mv {}.tmp {}\" \\;",
     "deploy": "./deploy.sh"
   },

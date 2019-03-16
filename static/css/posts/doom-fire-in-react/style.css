@@ -1,0 +1,57 @@
+.react-doom-fire div {
+    margin:0 auto;
+}
+
+.react-doom-fire canvas {
+    background:url(/img/posts/doom-fire-in-react/doomguy.png) no-repeat center;
+    background-size: cover;
+    display:block;
+}
+
+.react-doom-fire button, .react-doom-fire input, .react-doom-fire p {
+    margin:0;
+    display:inline-block;
+    box-sizing:border-box;
+}
+
+.react-doom-fire button, .react-doom-fire input {
+    margin-right:-1px;
+    margin-bottom:-1px;
+    border:1px solid lightgray;
+    outline:0;
+}
+
+.react-doom-fire .start-stop, .react-doom-fire input[type=text] {
+    width:25%;
+    height:32px;
+    text-align:center;
+    float:left;
+
+}
+.react-doom-fire input[type=range], .react-doom-fire p {
+    width:50%;
+    height:32px;
+    text-align:center;
+    float:left;
+}
+
+.react-doom-fire input[type=range] {
+    width:100%;
+}
+
+.react-doom-fire .toggle-transparent {
+    width:50%;
+    height:32px;
+    text-align:center;
+    float:left;
+}
+
+.react-doom-fire p {
+    font-family:Courier;
+    font-size:12px;
+    line-height:32px;
+}
+
+.react-doom-fire .clearfix {
+    clear:both;
+}
