@@ -11,8 +11,19 @@ class L3375P34K extends HTMLElement {
     constructor() {
         super();
 
+        var self = this;
+
         this.shadowTextNode = document.createTextNode('');
         this.textNode = null;
+        this.observer = new MutationObserver(function (e) {
+            var text = e[0].addedNodes[0].textContent;
+
+            self._onTranslate(text);
+        });
+
+        this.observer.observe(this, {
+            childList: true
+        });
 
         var shadow = this.attachShadow({
             mode: 'open'
@@ -21,7 +32,6 @@ class L3375P34K extends HTMLElement {
         shadow.appendChild(this.shadowTextNode);
 
         this._onLoad = this._onLoad.bind(this);
-        this._onTextChange = this._onTextChange.bind(this);
     }
 
     connectedCallback() {
@@ -36,9 +46,7 @@ class L3375P34K extends HTMLElement {
     disconnectedCallback() {
         document.removeEventListener('readystatechange', this._onLoad, true);
 
-        if (this.textNode) {
-            this.textNode.removeEventListener('DOMCharacterDataModified', this._onTextChange, true);
-        }
+        this.observer.disconnect();
     }
 
     _onLoad() {
@@ -58,17 +66,11 @@ class L3375P34K extends HTMLElement {
             this.appendChild(this.textNode);
         }
 
-        this.textNode.addEventListener('DOMCharacterDataModified', this._onTextChange, true);
-
         this._onTranslate()
     }
 
-    _onTextChange() {
-        this._onTranslate();
-    }
-
-    _onTranslate() {
-        var text = ((this.textNode || {}).textContent || '')
+    _onTranslate(_text) {
+        var text = (_text || (this.textNode || {}).textContent || '')
             .trim()
             .toLowerCase();
         var translated = text
