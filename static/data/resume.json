@@ -5,8 +5,8 @@
             "title": "Frontend Engineer",
             "email": "kevinselwyn@gmail.com",
             "website": "https://kevinselwyn.com",
-            "profile": "Kevin is a highly motivated self-starter with 8+ years of professional web development experience. He has a tenacious drive to learn and make the web better.",
-            "interests": "Kevin is passionate about music, The Legend of Zelda, and Corgis."
+            "profile": "Kevin is a highly motivated self-starter with 10+ years of professional web development experience. He has a tenacious drive to learn and make the web better.",
+            "interests": "Kevin is passionate about music, The Office, The Legend of Zelda, and Corgis."
         },
         "social": [
             {
@@ -26,24 +26,58 @@
                 "url": "https://www.youtube.com/channel/UCkh-Uavq2a-Sbfxw3rJQS8A"
             }
         ],
+        "projects": [
+            {
+                "name": "Nessemble",
+                "url": "https://github.com/kevinselwyn/nessemble",
+                "description": [
+                    "A 6502 assembler for the Nintendo Entertainment System"
+                ]
+            },
+            {
+                "name": "canvas-steg",
+                "url": "https://github.com/kevinselwyn/canvas-steg",
+                "description": [
+                    "Execute and embed JavaScript hidden in steganographic images"
+                ]
+            }
+        ],
         "employment": [
             {
                 "employer": "Amper Music",
-                "title": "frontend engineer",
+                "title": "sr. frontend engineer",
                 "start": "2016",
                 "end": "present",
+                "links": [
+                    {
+                        "name": "Amper Music",
+                        "url": "https://ampermusic.com/"
+                    }
+                ],
                 "description": [
-                    "Re-architecting a legacy React app",
+                    "Leading the rearchitecture of a legacy React app",
                     "Testing, consuming, and documenting public and internal web APIs"
                 ]
             },
             {
                 "employer": "Penguin Random House",
                 "title": "web developer",
+                "url": "",
                 "start": "2014",
                 "end": "2016",
+                "links": [
+                    {
+                        "name": "Fodors Travel",
+                        "url": "https://www.fodors.com/"
+                    },
+                    {
+                        "name": "Living Language",
+                        "url": "https://www.livinglanguage.com/"
+                    }
+                ],
                 "description": [
                     "Maintaining and improving an enterprise-level website",
+                    "Disassembling/reverse-engineering a Flash application and converting to a custom Javascript framework",
                     "Coordinating large, regularly scheduled HTML email blasts"
                 ]
             },
@@ -52,6 +86,12 @@
                 "title": "sr. web developer",
                 "start": "2012",
                 "end": "2014",
+                "links": [
+                    {
+                        "name": "TSL Marketing",
+                        "url": "https://www.tslmarketing.com/"
+                    }
+                ],
                 "description": [
                     "Developing websites, blogs, landing pages, and HTML emails for clients in the technology sector",
                     "Working from Photoshop files to build HTML documents using HTML/PHP, CSS, and Javascript",
@@ -66,6 +106,7 @@
                 "title": "freelance web developer",
                 "start": "2010",
                 "end": "2012",
+                "links": [],
                 "description": [
                     "Created and maintained websites in a timely fashion"
                 ]
@@ -89,27 +130,37 @@
             {
                 "level": "expert",
                 "skills": [
-                    "JavaScript/Node.js",
+                    "JavaScript",
+                    "TypeScript",
                     "React",
                     "GraphQL",
+                    "REST",
+                    "HTML/CSS",
                     "SASS",
-                    "Unix"
+                    "Unix",
+                    "SQL",
+                    "Python",
+                    "Bash/Shell"
                 ]
             },
             {
                 "level": "intermediate",
                 "skills": [
                     "Adobe Creative Suite",
-                    "Python",
                     "C",
+                    "C#",
+                    "Java",
+                    "PHP",
+                    "Swift",
                     "6502 Assembly"
                 ]
             },
             {
-                "level": "novice",
+                "level": "proficient",
                 "skills": [
                     "Functional Programming",
-                    "Machine Learning"
+                    "Machine Learning",
+                    "Rust"
                 ]
             }
         ]

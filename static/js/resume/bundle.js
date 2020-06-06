@@ -108,6 +108,42 @@
         ]);
     };
 
+    var Projects = function (props) {
+        var projects = props.projects;
+
+        return el('section', {
+            id: 'projects'
+        }, [
+            el('div', {
+                className: 'title'
+            }, [
+                el('h2', null, 'Projects')
+            ]),
+            el('div', {
+                className: 'content'
+            }, projects.map(function (item) {
+                return el(Fragment, null, [
+                    el('p', null, [
+                        el('strong', null, item.name),
+                        el('br'),
+                        el('small', null, [
+                            el('a', {
+                                href: item.url,
+                                target: '_blank'
+                            }, item.url)
+                        ])
+                    ]),
+                    el('ul', null, item.description.map(function (description) {
+                        return el('li', null, description);
+                    }))
+                ]);
+            })),
+            el('div', {
+                className: 'clearfix'
+            })
+        ]);
+    };
+
     var Employment = function (props) {
         var employment = props.employment;
 
@@ -124,10 +160,38 @@
             }, employment.map(function (item) {
                 return el(Fragment, null, [
                     el('p', null, [
-                        el('strong', null, item.employer),
+                        el('strong', null, (
+                            item.links.length !== 1 ? (
+                                item.employer
+                            ) : (
+                                el('a', {
+                                    href: item.links[0].url,
+                                    target: '_blank'
+                                }, item.employer)
+                            )
+                        )),
                         ' ',
                         el('em', null, item.start + ' - ' + item.end),
                         el('br'),
+                        item.links.length <= 1 ? null : (
+                            el(Fragment, null, [
+                                el('small', null, [
+                                    el('span', null, '↳ '),
+                                    item.links.map(function (link, i, links) {
+                                        return el(Fragment, null, [
+                                            el('a', {
+                                                href: link.url,
+                                                target: '_blank'
+                                            }, link.name),
+                                            (i === links.length - 1) ? null : (
+                                                el('span', null, ', ')
+                                            )
+                                        ]);
+                                    })
+                                ]),
+                                el('br')
+                            ])
+                        ),
                         el('small', null, item.title)
                     ]),
                     el('br'),
@@ -234,6 +298,7 @@
         var _data = useState({
             info: {},
             social: [],
+            projects: [],
             employment: [],
             education: [],
             skills: []
@@ -268,6 +333,9 @@
             }),
             el(Profile, {
                 info: data.info
+            }),
+            el(Projects, {
+                projects: data.projects
             }),
             el(Employment, {
                 employment: data.employment
