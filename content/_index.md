@@ -10,3 +10,5 @@ I'm Kevin. I'm a Frontend Engineer.
 Here you will find random musings. Consume at your own risk.
 
 Check out my [resume](/resume/) or [blog posts](/posts/).
+
+**Be the change** and check out some of the [causes](/causes/) important to me.
