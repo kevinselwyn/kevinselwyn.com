@@ -195,7 +195,7 @@
                         el('small', null, item.title)
                     ]),
                     el('br'),
-                    el('p', null, 'Reponsibilities included:'),
+                    el('p', null, 'Responsibilities included:'),
                     el('ul', null, item.description.map(function (description) {
                         return el('li', null, description);
                     }))

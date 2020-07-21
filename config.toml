@@ -31,3 +31,6 @@ weight = 3
 name = "Categories"
 url = "categories/"
 weight = 4
+
+[markup.goldmark.renderer]
+unsafe= true
