@@ -148,6 +148,19 @@ a:hover{
     text-decoration:underline;
 }
 
+.chip{
+    min-width:25px;
+    height:25px;
+    padding:0 5px;
+    margin:0 5px 5px 0;
+    border-radius:22px;
+    line-height:25px;
+    text-align:center;
+    background:#dddddd;
+    display:inline-block;
+    box-sizing:border-box;
+}
+
 /* ******************** *\
     $TITLE
 \* ******************** */
@@ -188,6 +201,128 @@ a:hover{
     padding:9px 0 0;
     border-top:1px solid #3f3f3f;
     float:right;
+}
+
+.project{
+    margin-top:9px;
+    padding-top:9px;
+    border-top:1px solid #dfdfdf;
+}
+
+.project:first-child {
+    margin:0;
+    padding:0;
+    border:none;
+}
+
+.project > p{
+    padding:5px 0;
+}
+
+.project .info {
+    width:50%;
+    padding-bottom:8px;
+    float:left;
+}
+
+.project .info p {
+    padding-top:16px;
+}
+
+.project .info p:first-child {
+    padding:0;
+}
+
+.project .meta {
+    width:50%;
+    padding:0 0 0 16px;
+    float:left;
+    box-sizing:border-box;
+}
+
+.project .meta__item {
+    padding-bottom:0;
+}
+
+.project .meta__item:first-child {
+    padding-bottom:16px;
+}
+
+.project .meta__item > div {
+    padding-top:5px;
+}
+
+.employment {
+    padding-top:16px;
+    padding-bottom:16px;
+    border-top:1px solid #dfdfdf;
+}
+
+.employment:first-child {
+    padding-top:0;
+    border:none;
+}
+
+.employment:last-child {
+    padding-bottom:0;
+}
+
+.employment .info {
+    width:50%;
+    float:left;
+}
+
+.employment .info p {
+    padding-top:16px;
+}
+
+.employment .info p:first-child {
+    padding:0;
+}
+
+.employment .meta {
+    width:50%;
+    padding:0 0 0 16px;
+    float:left;
+    box-sizing:border-box;
+}
+
+.employment .meta p {
+    padding-top:16px;
+}
+
+.employment .meta p:first-child {
+    padding-top:0;
+}
+
+.employment .meta__item {
+    padding-bottom:16px;
+}
+
+.employment .meta__item:last-child {
+    padding-bottom:0;
+}
+
+.employment .meta__item > div {
+    padding-top:5px;
+}
+
+.education {
+    padding-top:16px;
+}
+
+.education:first-child {
+    padding-top:0;
+}
+
+#skills p {
+    padding-top:16px;
+    padding-bottom:16px;
+    font-weight:bold;
+}
+
+#skills p:first-child {
+    padding-top:0;
 }
 
 /* ******************** *\
@@ -262,54 +397,6 @@ a:hover{
 }
 
 /* ******************** *\
-    $PROGRESS
-\* ******************** */
-.progress{
-    width:50%;
-    height:10px;
-    margin:10px 0 20px;
-    border:3px solid #000;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
-}
-
-.progress .experience{
-    width:25%;
-    height:inherit;
-    -webkit-border-top-left-radius:10px;
-    -moz-border-top-left-radius:10px;
-    border-top-left-radius:10px;
-    -webkit-border-bottom-left-radius:10px;
-    -moz-border-bottom-left-radius:10px;
-    border-bottom-left-radius:10px;
-    background:#ccc;
-    position:relative;
-}
-
-.progress .experience:after{
-    width:0;
-    height:0;
-    right:-10px;
-    border-top:10px solid #ccc;
-    border-right:10px solid transparent;
-    content:"";
-    position:absolute;
-}
-
-.progress.expert .experience{
-    width:90%;
-}
-
-.progress.intermediate .experience{
-    width:60%;
-}
-
-.progress.novice .experience{
-    width:30%;
-}
-
-/* ******************** *\
     $RESPONSIVE
 \* ******************** */
 @media all and (max-width:800px){
@@ -350,12 +437,28 @@ a:hover{
     $PRINT
 \* ******************** */
 @media print{
+    @page {
+        size:auto;
+    }
+
+    body {
+        width:100%;
+        margin-left:-8px;
+        padding-right:8px;
+        box-sizing:border-box;
+    }
+
     body section{
+        max-width:100%;
         padding:10px 0 0;
     }
 
     body section .content{
         width:79%;
+    }
+
+    #intro {
+        margin-top:40px;
     }
 
     #intro .title{
@@ -364,10 +467,12 @@ a:hover{
 
     #intro .content{
         width:100%;
+        border:none;
+        text-align:center;
     }
 
     #intro .content h1, #intro .content h2{
-        width:50%;
+        width:100%;
         float:left;
         clear:left;
     }
@@ -378,7 +483,7 @@ a:hover{
     }
 
     #intro .content p{
-        width:50%;
+        width:100%;
         float:left;
         clear:left;
         display:block;
@@ -388,22 +493,32 @@ a:hover{
         right:10px;
         top:0;
         position:absolute;
-}
+    }
 
     .social li{
         width:24px;
         height:24px;
     }
 
-    #skills p{
-        margin-bottom:8px;
-    }
-
     .social li a img{
         display:block;
     }
 
-    .progress{
+    #employment, #education {
+        page-break-before:always;
+    }
+
+    .chip {
+        min-width:0;
+        height:14px;
+        margin-right:8px;
+        margin-bottom:0;
+        padding:0;
+        line-height:14px;
+        display:inline-block;
+    }
+
+    .download-pdf {
         display:none;
     }
 }

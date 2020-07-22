@@ -5,8 +5,8 @@
             "title": "Frontend Engineer",
             "email": "kevinselwyn@gmail.com",
             "website": "https://kevinselwyn.com",
-            "profile": "Kevin is a highly motivated self-starter with 10+ years of professional web development experience. He has a tenacious drive to learn and make the web better.",
-            "interests": "Kevin is passionate about music, The Office, The Legend of Zelda, and Corgis."
+            "profile": "Kevin is a highly motivated self-starter with 10+ years of professional web development and software development experience. He has a tenacious drive to learn and he has a passion for improving the user experience.",
+            "interests": "Kevin is passionate about music, The Office, The Legend of Zelda, and Corgis. He can grow a beard with great haste and loves singing and playing the guitar (poorly)."
         },
         "social": [
             {
@@ -31,14 +31,56 @@
                 "name": "Nessemble",
                 "url": "https://github.com/kevinselwyn/nessemble",
                 "description": [
-                    "A 6502 assembler for the Nintendo Entertainment System"
+                    "A 6502 assembler for the Nintendo Entertainment System.",
+                    "Challenges included creating a custom BNF grammar and compiling to WASM to run in the browser."
+                ],
+                "languages": [
+                    "C", "Lua", "Scheme", "JavaScript", "WASM", "6502 Assembly", "Python", "SQL"
+                ],
+                "tech": [
+                    "Flex", "Bison", "Flask", "Emscripten", "Vagrant", "Ubuntu Linux", "GCC", "MinGW", "MSI", "Valgrind", "Splint", "Yarn", "NPM"
                 ]
             },
             {
                 "name": "canvas-steg",
                 "url": "https://github.com/kevinselwyn/canvas-steg",
                 "description": [
-                    "Execute and embed JavaScript hidden in steganographic images"
+                    "Execute and embed JavaScript hidden in steganographic images.",
+                    "Proof-of-concept to demonstrate how unbelievably easy it is to embed JavaScript in an image and then execute it."
+                ],
+                "languages": [
+                    "JavaScript"
+                ],
+                "tech": [
+                    "Yarn", "NPM", "Webpack"
+                ]
+            },
+            {
+                "name": "LEGO Enhanced Graphics Object",
+                "url": "https://github.com/kevinselwyn/lego",
+                "description": [
+                    "A file format for representing 2D LEGO brick images.",
+                    "Building off practical experience with block-based file formats, this file format is simple and extensible."
+                ],
+                "languages": [
+                    "C"
+                ],
+                "tech": [
+                    "libpng", "libjpeg", "GCC"
+                ]
+            },
+            {
+                "name": "x-darksouls-y",
+                "url": "https://github.com/kevinselwyn/x-darksouls-y",
+                "description": [
+                    "Twitter bot that tells you what X is the Dark Souls of.",
+                    "This bot (posting exclusively to @x_darksouls_y) searches recent Tweets for the phrase \"is harder than\" and replaces it with \"is the Dark Souls of\"."
+                ],
+                "languages": [
+                    "Python"
+                ],
+                "tech": [
+                    "Heroku", "Flask", "Twitter API"
                 ]
             }
         ],
@@ -55,13 +97,20 @@
                     }
                 ],
                 "description": [
-                    "Leading the rearchitecture of a legacy React app",
-                    "Testing, consuming, and documenting public and internal web APIs"
+                    "Kevin worked as the sole frontend developer of Amper Music's enterprise AI music composition web app. Having inherited a legacy React codebase, 2 major versions of the application were released during his tenure including numerous minor versions.",
+                    "He also worked closely with the Systems Architect/API Developer to test, document, and ultimately consume the company's public and internal web APIs.",
+                    "Kevin utilized Rust to generate WebAssembly to create extremely performant mission-critical components."
+                ],
+                "languages": [
+                    "JavaScript", "TypeScript", "HTML", "CSS", "SASS", "Python", "Rust", "WASM", "Bash"
+                ],
+                "tech": [
+                    "React", "NodeJS", "Yarn", "NPM", "Webpack", "Babel", "REST", "GraphQL", "Git", "Vagrant", "Ubuntu Linux", "Cargo", "Make"
                 ]
             },
             {
                 "employer": "Penguin Random House",
-                "title": "web developer",
+                "title": "sr. web developer",
                 "url": "",
                 "start": "2014",
                 "end": "2016",
@@ -76,9 +125,16 @@
                     }
                 ],
                 "description": [
-                    "Maintaining and improving an enterprise-level website",
-                    "Disassembling/reverse-engineering a Flash application and converting to a custom Javascript framework",
-                    "Coordinating large, regularly scheduled HTML email blasts"
+                    "Kevin was the lead frontend web developer for Fodor's Travel and contributed greatly to Living Language.",
+                    "He assisted in converting a legacy ColdFusion codebase to PHP/MySQL.",
+                    "Kevin disassembled/reverse-engineered a series of Flash games and converted them to a custom JavaScript framework for maximum browser compatibility without breaking the existing API endpoints.",
+                    "In addition to regular web development duties, Kevin also developed HTML emails and coordinated large, regularly scheduled email blasts."
+                ],
+                "languages": [
+                    "JavaScript", "ActionScript", "Flash", "HTML", "CSS", "SASS", "PHP", "ColdFusion", "SQL"
+                ],
+                "tech": [
+                    "NodeJS", "Grunt", "Haxe", "MySQL", "SVN"
                 ]
             },
             {
@@ -93,12 +149,16 @@
                     }
                 ],
                 "description": [
-                    "Developing websites, blogs, landing pages, and HTML emails for clients in the technology sector",
-                    "Working from Photoshop files to build HTML documents using HTML/PHP, CSS, and Javascript",
-                    "Performing SEO keyword research and optimization",
-                    "Training clients on proper use, care, and customization of their website or blog",
-                    "Adjusting creative quickly and efficiently in real time for client approval",
-                    "Aiding in the fulfillment of dimensional mail campaigns (postage, shipping)"
+                    "Kevin developed websites, blogs, landing pages, and HTML emails for clients in the technology sector.",
+                    "He als performed SEO keyword research and optimization.",
+                    "In addition to developing websites, he also trained clients on proper use, care, and customization of their website or blog through a CMS.",
+                    "Not limited to digital, Kevin also aided in the fulfillment of dimensional mail campaigns (postage, shipping)."
+                ],
+                "languages": [
+                    "JavaScript", "HTML", "CSS", "PHP", "SQL"
+                ],
+                "tech": [
+                    "Wordpress", "MySQL"
                 ]
             },
             {
@@ -108,7 +168,13 @@
                 "end": "2012",
                 "links": [],
                 "description": [
-                    "Created and maintained websites in a timely fashion"
+                    "Kevin created and maintained websites in a timely fashion and worked closely with clients to deliver great experiences for their users."
+                ],
+                "languages": [
+                    "JavaScript", "PHP", "SQL"
+                ],
+                "tech": [
+                    "Wordpress", "MySQL"
                 ]
             }
         ],
@@ -126,43 +192,54 @@
                 "degree": "high school diploma"
             }
         ],
-        "skills": [
-            {
-                "level": "expert",
-                "skills": [
-                    "JavaScript",
-                    "TypeScript",
-                    "React",
-                    "GraphQL",
-                    "REST",
-                    "HTML/CSS",
-                    "SASS",
-                    "Unix",
-                    "SQL",
-                    "Python",
-                    "Bash/Shell"
-                ]
-            },
-            {
-                "level": "intermediate",
-                "skills": [
-                    "Adobe Creative Suite",
-                    "C",
-                    "C#",
-                    "Java",
-                    "PHP",
-                    "Swift",
-                    "6502 Assembly"
-                ]
-            },
-            {
-                "level": "proficient",
-                "skills": [
-                    "Functional Programming",
-                    "Machine Learning",
-                    "Rust"
-                ]
-            }
-        ]
+        "skills": {
+            "language": [
+                "6502 Assembly",
+                "ActionScript",
+                "Bash",
+                "C",
+                "C#",
+                "ColdFusion",
+                "CSS",
+                "Flash",
+                "HTML",
+                "HTML/CSS",
+                "Java",
+                "JavaScript",
+                "Lua",
+                "PHP",
+                "Python",
+                "Rust",
+                "SASS",
+                "Scheme",
+                "SQL",
+                "Swift",
+                "TypeScript",
+                "WASM"
+            ],
+            "tech": [
+                "Adobe Creative Suite",
+                "Cargo",
+                "Emscripten",
+                "Flask",
+                "GCC",
+                "Git",
+                "GraphQL",
+                "Haxe",
+                "Heroku",
+                "Make",
+                "MySQL",
+                "NodeJS",
+                "NPM",
+                "React",
+                "REST",
+                "SVN",
+                "Ubuntu Linux",
+                "Vagrant",
+                "Webpack",
+                "Wordpress",
+                "Yarn"
+            ]
+        }
     }
 }

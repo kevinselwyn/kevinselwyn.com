@@ -29,8 +29,8 @@
                 el('p', null, [
                     '(Full resume at ',
                     el('a', {
-                        href: ''
-                    }, 'http://kevinselwyn.com/resume'),
+                        href: 'https://kevinselwyn.com/resume'
+                    }, 'https://kevinselwyn.com/resume'),
                     ')'
                 ]),
                 el('ul', {
@@ -77,7 +77,18 @@
                     ' ',
                     el('a', {
                         href: info.website
-                    }, info.website)
+                    }, info.website),
+                    el('br'),
+                    el('span', {
+                        className: 'download-pdf'
+                    }, [
+                        el('strong', null, '↳ '),
+                        el('a', {
+                            href: '/data/resume.pdf',
+                            target: '_blank',
+                            download: 'Kevin Selwyn - Resume.pdf'
+                        }, 'Download resume as PDF')
+                    ])
                 ])
             ]),
             el('div', {
@@ -117,25 +128,69 @@
             el('div', {
                 className: 'title'
             }, [
-                el('h2', null, 'Projects')
+                el('h2', null, 'Personal Projects')
             ]),
             el('div', {
                 className: 'content'
             }, projects.map(function (item) {
-                return el(Fragment, null, [
-                    el('p', null, [
-                        el('strong', null, item.name),
-                        el('br'),
-                        el('small', null, [
-                            el('a', {
-                                href: item.url,
-                                target: '_blank'
-                            }, item.url)
-                        ])
+                return el('div', {
+                    className: 'project'
+                }, [
+                    el('div', {
+                        className: 'info'
+                    }, [
+                        el('p', null, [
+                            el('strong', null, item.name),
+                            el('br'),
+                            el('small', null, [
+                                el('a', {
+                                    href: item.url,
+                                    target: '_blank'
+                                }, item.url)
+                            ])
+                        ]),
+                        el(Fragment, null, item.description.map(function (description) {
+                            return el('p', null, description);
+                        }))
                     ]),
-                    el('ul', null, item.description.map(function (description) {
-                        return el('li', null, description);
-                    }))
+                    el('div', {
+                        className: 'meta'
+                    }, [
+                        el('div', {
+                            className: 'meta__item'
+                        }, [
+                            el('small', null, 'Language(s):'),
+                            el('div', {
+                                className: 'languages'
+                            }, (
+                                item.languages.map(function (language) {
+                                    return el('small', {
+                                        className: 'chip'
+                                    }, language);
+                                })
+                            )),
+                        ]),
+                        el('div', {
+                            className: 'meta__item'
+                        }, [
+                            el('small', null, 'Tech:'),
+                            el('div', {
+                                className: 'tech'
+                            }, (
+                                item.tech.map(function (language) {
+                                    return el('small', {
+                                        className: 'chip'
+                                    }, language);
+                                })
+                            ))
+                        ]),
+                        el('div', {
+                            className: 'clearfix'
+                        })
+                    ]),
+                    el('div', {
+                        className: 'clearfix'
+                    })
                 ]);
             })),
             el('div', {
@@ -158,47 +213,92 @@
             el('div', {
                 className: 'content'
             }, employment.map(function (item) {
-                return el(Fragment, null, [
-                    el('p', null, [
-                        el('strong', null, (
-                            item.links.length !== 1 ? (
-                                item.employer
-                            ) : (
-                                el('a', {
-                                    href: item.links[0].url,
-                                    target: '_blank'
-                                }, item.employer)
-                            )
-                        )),
-                        ' ',
-                        el('em', null, item.start + ' - ' + item.end),
-                        el('br'),
-                        item.links.length <= 1 ? null : (
-                            el(Fragment, null, [
-                                el('small', null, [
-                                    el('span', null, '↳ '),
-                                    item.links.map(function (link, i, links) {
-                                        return el(Fragment, null, [
-                                            el('a', {
-                                                href: link.url,
-                                                target: '_blank'
-                                            }, link.name),
-                                            (i === links.length - 1) ? null : (
-                                                el('span', null, ', ')
-                                            )
-                                        ]);
-                                    })
-                                ]),
-                                el('br')
-                            ])
-                        ),
-                        el('small', null, item.title)
+                return el('div', {
+                    className: 'employment'
+                }, [
+                    el('div', {
+                        className: 'info'
+                    }, [
+                        el('p', null, [
+                            el('strong', null, (
+                                item.links.length !== 1 ? (
+                                    item.employer
+                                ) : (
+                                    el('a', {
+                                        href: item.links[0].url,
+                                        target: '_blank'
+                                    }, item.employer)
+                                )
+                            )),
+                            ' ',
+                            el('em', null, item.start + ' - ' + item.end),
+                            el('br'),
+                            item.links.length <= 1 ? null : (
+                                el(Fragment, null, [
+                                    el('small', null, [
+                                        el('span', null, '↳ '),
+                                        item.links.map(function (link, i, links) {
+                                            return el(Fragment, null, [
+                                                el('a', {
+                                                    href: link.url,
+                                                    target: '_blank'
+                                                }, link.name),
+                                                (i === links.length - 1) ? null : (
+                                                    el('span', null, ', ')
+                                                )
+                                            ]);
+                                        })
+                                    ]),
+                                    el('br')
+                                ])
+                            ),
+                            el('small', null, item.title),
+                            item.description.map(function (description) {
+                                return el('p', null, description);
+                            })
+                        ]),
                     ]),
-                    el('br'),
-                    el('p', null, 'Responsibilities included:'),
-                    el('ul', null, item.description.map(function (description) {
-                        return el('li', null, description);
-                    }))
+                    el('div', {
+                        className: 'meta'
+                    }, (
+                        el(Fragment, null, [
+                            !item.languages ? null : (
+                                el('div', {
+                                    className: 'meta__item'
+                                }, [
+                                    el('small', null, 'Language(s):'),
+                                    el('div', {
+                                        className: 'languages'
+                                    }, (
+                                        item.languages.map(function (language) {
+                                            return el('small', {
+                                                className: 'chip'
+                                            }, language);
+                                        })
+                                    )),
+                                ])
+                            ),
+                            !item.tech ? null : (
+                                el('div', {
+                                    className: 'meta__item'
+                                }, [
+                                    el('small', null, 'Tech:'),
+                                    el('div', {
+                                        className: 'tech'
+                                    }, (
+                                        item.tech.map(function (language) {
+                                            return el('small', {
+                                                className: 'chip'
+                                            }, language);
+                                        })
+                                    ))
+                                ])
+                            )
+                        ])
+                    )),
+                    el('div', {
+                        className: 'clearfix'
+                    })
                 ]);
             })),
             el('div', {
@@ -221,15 +321,15 @@
             el('div', {
                 className: 'content'
             }, education.map(function (item) {
-                return el('p', null, [
+                return el('div', {
+                    className: 'education'
+                }, el('p', null, [
                     el('strong', null, item.school),
                     ' ',
                     el('em', null, item.start + ' - ' + item.end),
                     el('br'),
-                    el('em', null, item.degree),
-                    el('br'),
-                    el('br')
-                ]);
+                    el('em', null, item.degree)
+                ]))
             })),
             el('div', {
                 className: 'clearfix'
@@ -250,22 +350,20 @@
             ]),
             el('div', {
                 className: 'content'
-            }, skills.map(function (item) {
-                return el(Fragment, null, [
-                    el('p', null, [
-                        el('strong', null, item.skills.join(', ')),
-                        ' ',
-                        el('em', null, item.level)
-                    ]),
-                    el('div', {
-                        className: 'progress ' + item.level
-                    }, [
-                        el('div', {
-                            className: 'experience'
-                        })
-                    ])
-                ]);
-            })),
+            }, [
+                el('p', null, 'Language(s):'),
+                (skills.language || []).map(function (item) {
+                    return el('small', {
+                        className: 'chip'
+                    }, item);
+                }),
+                el('p', null, 'Tech:'),
+                (skills.tech || []).map(function (item) {
+                    return el('small', {
+                        className: 'chip'
+                    }, item);
+                })
+            ]),
             el('div', {
                 className: 'clearfix'
             })
