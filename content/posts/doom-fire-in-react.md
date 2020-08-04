@@ -9,7 +9,6 @@ js: [
     "/js/react/react-16.8.4.min.js",
     "/js/react/react-dom-16.8.4.min.js",
     "/js/react/prop-types-15.7.2.min.js",
-    "/js/posts/doom-fire-in-react/react-doom-fire.js",
     "/js/posts/doom-fire-in-react/bundle.js"
 ]
 ---
@@ -29,11 +28,14 @@ Here is what we end up with:
 Here's our code for the **`ReactDoomFire`** component:
 
 ```js
-class ReactDoomFire extends React.Component {
+import React, {Component, createRef} from 'react';
+import PropTypes from 'prop-types';
+
+class ReactDoomFire extends Component {
     constructor(props) {
         super(props);
 
-        this.canvas = React.createRef();
+        this.canvas = createRef();
         this.context = null;
 
         this.data = null;
@@ -96,8 +98,8 @@ class ReactDoomFire extends React.Component {
     _onPixelsInit() {
         const {width, height} = this.props;
         const size = width * height;
-        var i = 0;
-        var l = 0;
+        let i = 0;
+        let l = 0;
 
         this.pixels = this.pixels.slice(0, size);
 
@@ -128,8 +130,8 @@ class ReactDoomFire extends React.Component {
     _onStart() {
         const {width, height, palette} = this.props;
         const {length} = palette;
-        var x = 0;
-        var y = height - 1;
+        let x = 0;
+        let y = height - 1;
 
         for (x = 0; x < width; x += 1) {
             this.pixels[x + (y * width)] = length - 1;
@@ -161,9 +163,9 @@ class ReactDoomFire extends React.Component {
     _onDraw() {
         const {width, height, running, palette, transparent} = this.props;
         const {context, data} = this;
-        var total = 0;
-        var x = 0;
-        var y = 0;
+        let total = 0;
+        let x = 0;
+        let y = 0;
 
         context.clearRect(0, 0, width, height);
 
@@ -219,11 +221,12 @@ class ReactDoomFire extends React.Component {
     }
 
     render() {
-        return React.createElement('canvas', {
-            width: this.props.width,
-            height: this.props.height,
-            ref: this.canvas
-        });
+        return (
+            <canvas
+                ref={this.canvas}
+                width={this.props.width}
+                height={this.props.height} />
+        );
     }
 }
 
@@ -287,11 +290,11 @@ ReactDoomFire.defaultProps = {
 Let's break that down:
 
 ```js
-class ReactDoomFire extends React.Component {
+class ReactDoomFire extends Component {
     constructor(props) {
         super(props);
 
-        this.canvas = React.createRef();
+        this.canvas = createRef();
         this.context = null;
 
         this.data = null;
@@ -317,7 +320,7 @@ class ReactDoomFire extends React.Component {
 Here we have our contructor, setting up all the variables and methods our
 component needs. The only DOM element the component will render is a
 **`<canvas>`** element where we will draw our pixels, hence the usage of
-**`this.canvas = React.createRef()`** which is critical for grabbing that raw
+**`this.canvas = createRef()`** which is critical for grabbing that raw
 DOM element and attaching context.
 
 ```js
@@ -393,8 +396,8 @@ per second) is updated, or when the run state is toggled on/off.
     _onPixelsInit() {
         const {width, height} = this.props;
         const size = width * height;
-        var i = 0;
-        var l = 0;
+        let i = 0;
+        let l = 0;
 
         this.pixels = this.pixels.slice(0, size);
 
@@ -434,8 +437,8 @@ setting the dimensions of the canvas and clearing it.
     _onStart() {
         const {width, height, palette} = this.props;
         const {length} = palette;
-        var x = 0;
-        var y = height - 1;
+        let x = 0;
+        let y = height - 1;
 
         for (x = 0; x < width; x += 1) {
             this.pixels[x + (y * width)] = length - 1;
@@ -478,9 +481,9 @@ the FPS (1000 / FPS), then it draws a new frame.
     _onDraw() {
         const {width, height, running, palette, transparent} = this.props;
         const {context, data} = this;
-        var total = 0;
-        var x = 0;
-        var y = 0;
+        let total = 0;
+        let x = 0;
+        let y = 0;
 
         context.clearRect(0, 0, width, height);
 
@@ -555,11 +558,12 @@ on the pixels around it
 // ...
 
     render() {
-        return React.createElement('canvas', {
-            width: this.props.width,
-            height: this.props.height,
-            ref: this.canvas
-        });
+        return (
+            <canvas
+                ref={this.canvas}
+                width={this.props.width}
+                height={this.props.height} />
+        );
     }
 
 // ...

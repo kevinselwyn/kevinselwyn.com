@@ -13,7 +13,7 @@ Jumping right in:
 ```js
 class ReadTime {
     constructor(text, opts) {
-        var real_opts = opts || {};
+        const real_opts = opts || {};
 
         this._raw = text;
         this.text = this._cleanText(this._raw);
@@ -41,7 +41,7 @@ Break it down:
 ```js
 class ReadTime {
     constructor(text, opts) {
-        var real_opts = opts || {};
+        const real_opts = opts || {};
 
         this._raw = text;
         this.text = this._cleanText(this._raw);

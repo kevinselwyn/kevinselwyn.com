@@ -38,7 +38,7 @@ One thing to note is that the name for a new Custom Element *must* contain a hyp
 Now we create the class that defines the Custom Element:
 
 ```js
-var L337MAPPING = {
+const L337MAPPING = {
     a: 4,
     e: 3,
     g: 6,
@@ -51,21 +51,19 @@ class L3375P34K extends HTMLElement {
     constructor() {
         super();
 
-        var self = this;
-
         this.shadowTextNode = document.createTextNode('');
         this.textNode = null;
-        this.observer = new MutationObserver(function (e) {
-            var text = e[0].addedNodes[0].textContent;
+        this.observer = new MutationObserver((e) => {
+            const text = e[0].addedNodes[0].textContent;
 
-            self._onTranslate(text);
+            this._onTranslate(text);
         });
 
         this.observer.observe(this, {
             childList: true
         });
 
-        var shadow = this.attachShadow({
+        const shadow = this.attachShadow({
             mode: 'open'
         });
 
@@ -95,7 +93,7 @@ class L3375P34K extends HTMLElement {
         }
 
         this.textNode = Array.prototype.slice.call(this.childNodes)
-            .filter(function (node) {
+            .filter((node) => {
                 return node.nodeType === 3;
             })
             .shift();
@@ -110,12 +108,12 @@ class L3375P34K extends HTMLElement {
     }
 
     _onTranslate(_text) {
-        var text = (_text || (this.textNode || {}).textContent || '')
+        const text = (_text || (this.textNode || {}).textContent || '')
             .trim()
             .toLowerCase();
-        var translated = text
+        const translated = text
             .split('')
-            .map(function (chr) {
+            .map((chr) => {
                 return L337MAPPING[chr] !== undefined ? L337MAPPING[chr] : chr;
             })
             .join('');
@@ -132,7 +130,7 @@ if (window.customElements) {
 Let's break that down:
 
 ```js
-var L337MAPPING = {
+const L337MAPPING = {
     a: 4,
     e: 3,
     g: 6,
@@ -149,21 +147,19 @@ class L3375P34K extends HTMLElement {
     constructor() {
         super();
 
-        var self = this;
-
         this.shadowTextNode = document.createTextNode('');
         this.textNode = null;
-        this.observer = new MutationObserver(function (e) {
-            var text = e[0].addedNodes[0].textContent;
+        this.observer = new MutationObserver((e) => {
+            const text = e[0].addedNodes[0].textContent;
 
-            self._onTranslate(text);
+            this._onTranslate(text);
         });
 
         this.observer.observe(this, {
             childList: true
         });
 
-        var shadow = this.attachShadow({
+        const shadow = this.attachShadow({
             mode: 'open'
         });
 
@@ -219,7 +215,7 @@ Here we have our Custom Element lifecycle methods.
         }
 
         this.textNode = Array.prototype.slice.call(this.childNodes)
-            .filter(function (node) {
+            .filter((node) => {
                 return node.nodeType === 3;
             })
             .shift();
@@ -243,13 +239,13 @@ Next we grab the first **`textNode`** inside the **`<l337-5p34k>`** element, if 
 ```js
 // ...
 
-    _onTranslate() {
-        var text = ((this.textNode || {}).textContent || '')
+    _onTranslate(_text) {
+        const text = (_text || (this.textNode || {}).textContent || '')
             .trim()
             .toLowerCase();
-        var translated = text
+        const translated = text
             .split('')
-            .map(function (chr) {
+            .map((chr) => {
                 return L337MAPPING[chr] !== undefined ? L337MAPPING[chr] : chr;
             })
             .join('');

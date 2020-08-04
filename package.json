@@ -14,17 +14,24 @@
     "package": "yarn run package:html && yarn run package:xml && yarn run package:js && yarn run package:css",
     "package:html": "find public -name '*.html' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
     "package:xml": "find public -name '*.xml' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
-    "package:js": "find public/js -name '*.js' ! -name \"react-1*\" ! -name \"react-dom*\" -exec sh -c \"cat {} | babel --filename - | uglifyjs > {}.tmp && mv {}.tmp {}\" \\;",
+    "package:js": "ENTRY=`find static/js -name '*.js' ! -name 'react*.min.js' ! -name 'prop-types*'` NODE_ENV=production webpack --mode=production",
     "package:css": "find public/css -name '*.css' -exec sh -c \"cat {} | cssmin > {}.tmp && mv {}.tmp {}\" \\;",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "lint": "eslint `find static/js -name '*.js' ! -name 'react*.min.js' ! -name 'prop-types*'`"
   },
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
     "cssmin": "^0.4.3",
+    "eslint": "^7.6.0",
+    "eslint-plugin-react": "^7.20.5",
     "html-minifier": "^3.5.21",
-    "uglify-js": "^3.4.9"
+    "uglify-js": "^3.4.9",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }

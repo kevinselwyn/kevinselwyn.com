@@ -1,24 +1,29 @@
-(function () {
-    const roots = document.querySelectorAll('.react-doom-fire');
-    const App = (props) => {
-        const [width, setWidth] = React.useState(320);
-        const [height, setHeight] = React.useState(168);
-        const [fps, setFps] = React.useState(60);
-        const [running, setRunning] = React.useState(true);
-        const [transparent, setTransparent] = React.useState(false);
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
-        return React.createElement('div', {
-            style: {
+import ReactDoomFire from './react-doom-fire';
+
+const roots = document.querySelectorAll('.react-doom-fire');
+const App = (props) => {
+    const [width, setWidth] = useState(320);
+    const [height, setHeight] = useState(168);
+    const [fps, setFps] = useState(60);
+    const [running, setRunning] = useState(true);
+    const [transparent, setTransparent] = useState(false);
+
+    return (
+        <div
+            style={{
                 width: width
-            }
-        }, [
-            React.createElement(ReactDoomFire, {
-                width: width,
-                height: height,
-                fps: fps,
-                running: running,
-                transparent: transparent,
-                palette: !props.color ? undefined : [
+            }}>
+            <ReactDoomFire
+                width={width}
+                height={height}
+                fps={fps}
+                running={running}
+                transparent={transparent}
+                palette={!props.color ? undefined : [
                     0X030409,
                     0X050810,
                     0X090E1C,
@@ -56,65 +61,74 @@
                     0XC5CFEC,
                     0XDFE5F4,
                     0XFDFDFE
-                ]
-            }),
-            React.createElement('button', {
-                className: 'start-stop',
-                disabled: running,
-                onClick: () => {
+                ]} />
+            <button
+                className="start-stop"
+                disabled={running}
+                onClick={() => {
                     setRunning(true);
-                }
-            }, 'Start'),
-            React.createElement('button', {
-                className: 'start-stop',
-                disabled: !running,
-                onClick: () => {
+                }}>
+                {'Start'}
+            </button>
+            <button
+                className="start-stop"
+                disabled={!running}
+                onClick={() => {
                     setRunning(false);
-                }
-            }, 'Stop'),
-            React.createElement('button', {
-                className: 'toggle-transparent',
-                onClick: () => {
+                }}>
+                {'Stop'}
+            </button>
+            <button
+                className="toggle-transparent"
+                onClick={() => {
                     setTransparent(!transparent);
-                }
-            }, 'Toggle Transparency'),
-            React.createElement('input', {
-                type: 'text',
-                placeholder: 'width',
-                value: width,
-                onChange: (e) => {
+                }}>
+                {'Toggle Transparency'}
+            </button>
+            <input
+                type="text"
+                placeholder="width"
+                value={width}
+                onChange={(e) => {
                     setRunning(false);
                     setWidth(parseInt(e.target.value) || 320);
-                }
-            }),
-            React.createElement('input', {
-                type: 'text',
-                placeholder: 'height',
-                value: height,
-                onChange: (e) => {
+                }} />
+            <input
+                type="text"
+                placeholder="height"
+                value={height}
+                onChange={(e) => {
                     setRunning(false);
                     setHeight(parseInt(e.target.value) || 168);
-                }
-            }),
-            React.createElement('p', null, `FPS: ${fps}`),
-            React.createElement('input', {
-                type: 'range',
-                value: fps,
-                min: 1,
-                max: 120,
-                onChange: (e) => {
+                }} />
+            <p>
+                {`FPS: ${fps}`}
+            </p>
+            <input
+                type="range"
+                value={fps}
+                min={1}
+                max={120}
+                onChange={(e) => {
                     setFps(parseInt(e.target.value));
-                }
-            }),
-            React.createElement('div', {
-                className: 'clearfix'
-            })
-        ]);
-    }
+                }} />
+            <div
+                className="clearfix" />
+        </div>
+    );
+};
 
-    [].slice.call(roots).forEach((root) => {
-        ReactDOM.render(React.createElement(App, {
-            color: root.getAttribute('data-color')
-        }), root);
-    });
-}());
+App.propTypes = {
+    color: PropTypes.string
+};
+
+App.defaultProps = {
+    color: undefined
+};
+
+[...roots].forEach((root) => {
+    ReactDOM.render((
+        <App
+            color={root.getAttribute('data-color')} />
+    ), root);
+});

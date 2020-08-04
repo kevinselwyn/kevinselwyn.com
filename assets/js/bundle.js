@@ -1,65 +1,42 @@
-// posts/calculate-read-time
-class ReadTime {
-    constructor(text, opts) {
-        var real_opts = opts || {};
-
-        this._raw = text;
-        this.text = this._cleanText(this._raw);
-        this.words = this.text.split(' ');
-        this.wpm = real_opts.wpm || 265;
-        this.time = this._calculateTime(this.words, this.wpm);
-    }
-
-    _cleanText(text) {
-        return (text || '')
-            .toString()
-            .trim()
-            .replace(/[\r\n\t]+/g, ' ')
-            .replace(/ +/g, ' ');
-    }
-
-    _calculateTime(words, wpm) {
-        return (words.length / wpm) * 60;
-    }
-}
+import ReadTime from '../../static/js/posts/calculate-read-time/read-time';
 
 (function () {
-    var article = document.querySelector('article');
+    const article = document.querySelector('article');
 
     if (!article) {
         return;
     }
 
-    var output = document.querySelector('.read-time');
+    const output = document.querySelector('.read-time');
 
     if (!output) {
         return;
     }
 
-    var articleClone = article.cloneNode(true);
+    const articleClone = article.cloneNode(true);
 
     if (!articleClone) {
         return;
     }
 
-    [].slice.call(articleClone.querySelectorAll('header') || [])
+    [...(articleClone.querySelectorAll('header') || [])]
         .forEach((item) => {
             item.parentNode.removeChild(item);
         });
 
-    [].slice.call(articleClone.querySelectorAll('.highlight') || [])
+    [...(articleClone.querySelectorAll('.highlight') || [])]
         .forEach((item) => {
             item.parentNode.removeChild(item);
         });
 
-    [].slice.call(articleClone.querySelectorAll('footer') || [])
+    [...(articleClone.querySelectorAll('footer') || [])]
         .forEach((item) => {
             item.parentNode.removeChild(item);
         });
 
-    var text = articleClone.innerText;
-    var readTime = new ReadTime(text);
-    var minutes = Math.floor(readTime.time / 60);
+    const text = articleClone.innerText;
+    const readTime = new ReadTime(text);
+    const minutes = Math.floor(readTime.time / 60);
 
     if (!minutes) {
         output.innerText = 'Quick read';
