@@ -1,8 +1,5 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-
-const root = document.querySelector('#root');
 
 /**
  * Intro component
@@ -72,7 +69,7 @@ const Intro = (props) => {
 
 Intro.propTypes = {
     info: PropTypes.object.isRequired,
-    social: PropTypes.object.isRequired
+    social: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const Contact = (props) => {
@@ -271,7 +268,7 @@ const Projects = (props) => {
 };
 
 Projects.propTypes = {
-    projects: PropTypes.object.isRequired
+    projects: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const Employment = (props) => {
@@ -437,7 +434,7 @@ const Employment = (props) => {
 };
 
 Employment.propTypes = {
-    employment: PropTypes.object.isRequired
+    employment: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const Education = (props) => {
@@ -488,7 +485,7 @@ const Education = (props) => {
 };
 
 Education.propTypes = {
-    education: PropTypes.object.isRequired
+    education: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const Skills = (props) => {
@@ -580,19 +577,16 @@ Interests.propTypes = {
  * @param {string} props.url - Resume URL
  */
 const Resume = (props) => {
-    const [data, setData] = useState({
-        info: {},
-        social: [],
-        projects: [],
-        employment: [],
-        education: [],
-        skills: []
-    });
+    const [data, setData] = useState(props.data);
     const _onStateLoad = (e) => {
         setData(e.target.response.data);
     };
 
-    useEffect(function () {
+    useEffect(() => {
+        if (!props.url) {
+            return;
+        }
+
         const xhr = new XMLHttpRequest();
 
         xhr.addEventListener('load', _onStateLoad, true);
@@ -601,7 +595,7 @@ const Resume = (props) => {
         xhr.responseType = 'json';
         xhr.send(null);
 
-        return function () {
+        return () => {
             xhr.removeEventListener('load', _onStateLoad, true);
         };
     }, []);
@@ -630,10 +624,19 @@ const Resume = (props) => {
 };
 
 Resume.propTypes = {
-    url: PropTypes.string.isRequired
+    url: PropTypes.string,
+    data: PropTypes.object
 };
 
-ReactDOM.render((
-    <Resume
-        url="/data/resume.json" />
-), root);
+Resume.defaultProps = {
+    data: {
+        info: {},
+        social: [],
+        projects: [],
+        employment: [],
+        education: [],
+        skills: []
+    }
+};
+
+export default Resume;

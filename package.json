@@ -11,11 +11,12 @@
     "dev": "hugo --config config.toml,dev.toml serve --buildDrafts --port 1234",
     "serve": "cd public && python -m SimpleHTTPServer 1234",
     "build": "hugo",
-    "package": "yarn run package:html && yarn run package:xml && yarn run package:js && yarn run package:css",
+    "package": "yarn run package:html && yarn run package:xml && yarn run package:js && yarn run package:css && yarn run package:resume",
     "package:html": "find public -name '*.html' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
     "package:xml": "find public -name '*.xml' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
     "package:js": "ENTRY=`find static/js -name '*.js' ! -name 'react*.min.js' ! -name 'prop-types*'` NODE_ENV=production webpack --mode=production",
     "package:css": "find public/css -name '*.css' -exec sh -c \"cat {} | cssmin > {}.tmp && mv {}.tmp {}\" \\;",
+    "package:resume": "NODE_ENV=production webpack --mode=production --config resume-ssr.webpack.config.js && node resume-ssr.min.js",
     "deploy": "./deploy.sh",
     "lint": "eslint `find static/js -name '*.js' ! -name 'react*.min.js' ! -name 'prop-types*'`"
   },
@@ -30,7 +31,8 @@
     "eslint": "^7.6.0",
     "eslint-plugin-react": "^7.20.5",
     "html-minifier": "^3.5.21",
-    "uglify-js": "^3.4.9",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
