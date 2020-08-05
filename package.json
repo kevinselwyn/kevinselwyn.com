@@ -27,6 +27,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "classnames": "^2.2.6",
     "cssmin": "^0.4.3",
     "eslint": "^7.6.0",
     "eslint-plugin-react": "^7.20.5",

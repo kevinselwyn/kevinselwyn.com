@@ -1,0 +1,180 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display:block;
+}
+
+body {
+    line-height:1;
+}
+
+ol, ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content:'';
+    content:none;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family:Arial, Sans-Serif;
+}
+
+#root {
+    background:white;
+}
+
+.header {
+    padding:0 20px 20px;
+    text-align:center;
+}
+
+.header .menu {
+    width:60px;
+    height:60px;
+    left:0;
+    top:0;
+    text-align:center;
+    font-size:32px;
+    line-height:60px;
+    position:fixed;
+    cursor:pointer;
+    display:none;
+}
+
+.header h1 {
+    padding:0 40px;
+    font-size:32px;
+    line-height:60px;
+}
+
+.header h2 {
+    padding-top:4px;
+}
+
+.header progress {
+    width:100%;
+    margin-top:10px;
+}
+
+.header p, .header time {
+    font-size:12px;
+    display:inline-block;
+}
+
+.header p {
+    margin:0 8px;
+}
+
+.sidebar {
+    width:33%;
+    min-width:256px;
+    box-sizing:border-box;
+    display:inline-block;
+}
+
+.sidebar li {
+    padding:10px 20px;
+}
+
+.sidebar li b {
+    font-weight:bold;
+}
+
+.sidebar li.selected {
+    background:#cccccc;
+}
+
+.sidebar li.hide {
+    display:none;
+}
+
+.sidebar li input {
+    margin:0 8px 0 0;
+    top:1px;
+    line-height:17px;
+    float:left;
+    position:relative;
+}
+
+.sidebar li label {
+    display:block;
+}
+
+.content {
+    width:66%;
+    padding:0 20px 20px;
+    box-sizing:border-box;
+    float:right;
+}
+
+.content h3 {
+    width:100%;
+    padding-bottom:8px;
+    font-size:24px;
+    text-align:center;
+}
+
+.content time {
+    width:100%;
+    padding-bottom:20px;
+    font-size:12px;
+    text-align:center;
+    display:block;
+}
+
+.content .step {
+    display:none;
+}
+
+.content .step.show {
+    display:block;
+}
+
+@media only screen and (max-width:768px) {
+    .header .menu {
+        display:block;
+    }
+
+    .recipe.open .header, .recipe.open .content {
+        opacity:0.6;
+    }
+
+    .sidebar {
+        max-width:50%;
+        left:-100%;
+        top:0;
+        bottom:0;
+        background:white;
+        transition:left 0.2s ease-in-out;
+        position:absolute;
+        z-index:10;
+    }
+
+    .recipe.open .sidebar {
+        left:0;
+    }
+
+    .content {
+        width:100%;
+    }
+}

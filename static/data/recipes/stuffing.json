@@ -1,0 +1,109 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Recipe",
+    "name": "Stuffing",
+    "author": {
+        "@type": "Person",
+        "name": "Kevin Selwyn",
+        "email": "kevinselwyn@gmail.com"
+    },
+    "datePublished": "2020-07-04",
+    "description": "Bread on bread on bread. Thanksgiving not required.",
+    "prepTime": "PT12H15M",
+    "cookTime": "PT45M",
+    "totalTime": "PT13H",
+    "keywords": "bread",
+    "recipeYield": "12",
+    "recipeCategory": "Entree",
+    "recipeCuisine": "American",
+    "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "261",
+        "carbohydrateContent": "5.7g",
+        "cholesterolContent": "138mg",
+        "fatContent": "25g",
+        "fiberContent": "0.5g",
+        "proteinContent": "3.8g",
+        "saturatedFatContent": "15g",
+        "sodiumContent": "256mg",
+        "sugarContent": "1g",
+        "transFatContent": "0.9g"
+    },
+    "recipeIngredient": [
+        "3.5 loaves of bread",
+        "3 sticks of butter",
+        "1 white onion",
+        "1 bunch celery",
+        "5 eggs",
+        "1.5 tbsp. poultry seasoning",
+        "2 tsp. sage"
+    ],
+    "recipeInstructions": [
+        {
+            "@type": "HowToStep",
+            "name": "Prep Bread",
+            "text": "Cube bread in 1/2 loaf increments and sprinkle each layer evenly with poultry seasoning and sage. Let sit overnight.",
+            "timeRequired": "PT12H",
+            "itemListElement": [
+                "3.5 loaves of bread",
+                "1.5 tbsp. poultry seasoning",
+                "2 tsp. sage"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Prep Vegetables",
+            "text": "Melt butter in a pan. Add celery and onions and cook for 5-8 minutes or until softened. Set aside and let cool.",
+            "timeRequired": "PT8M",
+            "itemListElement": [
+                "3 sticks of butter",
+                "1 white onion",
+                "1 bunch celery"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Prep Eggs",
+            "text": "Break eggs into bowl and whisk together.",
+            "timeRequired": "PT2M",
+            "itemListElement": [
+                "5 eggs"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Assemble",
+            "text": "Add celery, onions, and eggs to bread cubes. Mix thorougly and add water until the mixure reaches the desired moisture level.",
+            "timeRequired": "PT5M",
+            "itemListElement": [
+                "3.5 loaves of bread",
+                "3 sticks of butter",
+                "1 white onion",
+                "1 bunch celery",
+                "5 eggs",
+                "1.5 tbsp. poultry seasoning",
+                "2 tsp. sage"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Cook",
+            "text": "Cook at 350°F for 45 minutes.",
+            "timeRequired": "PT45M",
+            "itemListElement": [
+                "3.5 loaves of bread",
+                "3 sticks of butter",
+                "1 white onion",
+                "1 bunch celery",
+                "5 eggs",
+                "1.5 tbsp. poultry seasoning",
+                "2 tsp. sage"
+            ]
+        }
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "ratingCount": 5
+    }
+}
