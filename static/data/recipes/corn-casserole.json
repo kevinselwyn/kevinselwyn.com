@@ -1,0 +1,80 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Recipe",
+    "name": "Corn Casserole",
+    "author": {
+        "@type": "Person",
+        "name": "Kevin Selwyn",
+        "email": "kevinselwyn@gmail.com"
+    },
+    "datePublished": "2020-07-04",
+    "description": "Corn casserole. Like cornbread, but better.",
+    "prepTime": "PT10M",
+    "cookTime": "PT50M",
+    "totalTime": "PT1H",
+    "keywords": "casserole",
+    "recipeYield": "12",
+    "recipeCategory": "Side",
+    "recipeCuisine": "American",
+    "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "254",
+        "carbohydrateContent": "37g",
+        "cholesterolContent": "31mg",
+        "fatContent": "11g",
+        "fiberContent": "2.4g",
+        "proteinContent": "5g",
+        "saturatedFatContent": "1.1g",
+        "sodiumContent": "199mg",
+        "sugarContent": "8.6g",
+        "transFatContent": "0.2g"
+    },
+    "recipeIngredient": [
+        "1 cup cornmeal",
+        "1 cup all-purpose flour",
+        "2 tsp. baking powder",
+        "1/3 cup sugar",
+        "1 15.5 oz. can sweet corn",
+        "1 15.5 oz. can cream-style corn",
+        "1/2 cup vegetable oil",
+        "2 eggs"
+    ],
+    "recipeInstructions": [
+        {
+            "@type": "HowToStep",
+            "name": "Prep Dry",
+            "text": "Add cornmeal, flour, baking powder, and sugar into a medium-sized baking dish and stir until combined.",
+            "timeRequired": "PT5M",
+            "itemListElement": [
+                "1 cup cornmeal",
+                "1 cup all-purpose flour",
+                "2 tsp. baking powder",
+                "1/3 cup sugar"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Prep Wet",
+            "text": "Add corn, cream-style corn, vegetable oil, and eggs (beaten) to baking dish. Stir until combined.",
+            "timeRequired": "PT5M",
+            "itemListElement": [
+                "1 15.5 oz. can sweet corn",
+                "1 15.5 oz. can cream-style corn",
+                "1/2 cup vegetable oil",
+                "2 eggs"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Bake",
+            "text": "Cook at 350°F for 50-55 minutes.",
+            "timeRequired": "PT50M",
+            "itemListElement": []
+        }
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "ratingCount": 5
+    }
+}

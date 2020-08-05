@@ -1,0 +1,104 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Recipe",
+    "name": "Pasta Bake",
+    "author": {
+        "@type": "Person",
+        "name": "Kevin Selwyn",
+        "email": "kevinselwyn@gmail.com"
+    },
+    "datePublished": "2020-07-04",
+    "description": "Pasta bake. Bake the pasta.",
+    "prepTime": "PT30M",
+    "cookTime": "PT30M",
+    "totalTime": "PT1H",
+    "keywords": "pasta",
+    "recipeYield": "8",
+    "recipeCategory": "Side",
+    "recipeCuisine": "Italian",
+    "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "503",
+        "carbohydrateContent": "47g",
+        "cholesterolContent": "53mg",
+        "fatContent": "24g",
+        "fiberContent": "6.4g",
+        "proteinContent": "26g",
+        "saturatedFatContent": "9.5g",
+        "sodiumContent": "1076mg",
+        "sugarContent": "12g",
+        "transFatContent": "0.2g"
+    },
+    "recipeIngredient": [
+        "1 lbs. italian sausage",
+        "1 lbs. rotini",
+        "1 pint cherry tomatoes",
+        "1 red bell pepper",
+        "8 oz. mushrooms",
+        "10 oz. chopped spinach",
+        "24 oz. pasta sauce",
+        "1 15.5 oz. can sweet corn",
+        "8 oz. shredded mozzarella cheese"
+    ],
+    "recipeInstructions": [
+        {
+            "@type": "HowToStep",
+            "name": "Prep Sausage",
+            "text": "Heat a drizzle of olive oil in a pan and brown the sausage for 5-8 minutes. Set aside.",
+            "timeRequired": "PT8M",
+            "itemListElement": [
+                "1 lbs. italian sausage"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Prep Pasta",
+            "text": "Prepare pasta according to instructions. Drain and set aside.",
+            "timeRequired": "PT10M",
+            "itemListElement": [
+                "1 lbs. rotini"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Prep Vegetables",
+            "text": "Wash and dice cherry tomatoes, pepper, and mushrooms. Wilt spinach for 5 minutes.",
+            "timeRequired": "PT10M",
+            "itemListElement": [
+                "1 pint cherry tomatoes",
+                "1 red bell pepper",
+                "8 oz. mushrooms",
+                "10 oz. chopped spinach"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Assemble",
+            "text": "Add sausage, rotini, and chopped vegetables to a large baking dish. Add pasta sauce and (drained) sweet corn and mix until combined. Top with shredded mozzarella cheese.",
+            "timeRequired": "PT2M",
+            "itemListElement": [
+                "1 lbs. italian sausage",
+                "1 lbs. rotini",
+                "1 pint cherry tomatoes",
+                "1 red bell pepper",
+                "8 oz. mushrooms",
+                "10 oz. chopped spinach",
+                "24 oz. pasta sauce",
+                "1 15.5 oz. can sweet corn",
+                "8 oz. shredded mozzarella cheese"
+            ]
+        },
+        {
+            "@type": "HowToStep",
+            "name": "Bake",
+            "text": "Cover with aluminum foil and cook at 350°F for 30 minutes.",
+            "timeRequired": "PT30M",
+            "itemListElement": []
+        }
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "ratingCount": 5
+    }
+}

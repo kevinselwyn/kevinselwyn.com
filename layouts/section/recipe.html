@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.667,user-scalable=yes" />
+  {{ partial "head.html" . }}
+  {{ partial "head-css.html" . }}
+  <script type="application/ld+json" src="{{ .Params.recipe }}"></script>
+</head>
+<body>
+  <div id="root"></div>
+  {{ partial "tail.html" . }}
+</body>
+</html>
