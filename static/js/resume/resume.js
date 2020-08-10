@@ -354,18 +354,18 @@ const Employment = (props) => {
                                             <small>
                                                 {item.title}
                                             </small>
-                                            {
-                                                item.description
-                                                    .map((description) => {
-                                                        return (
-                                                            <p
-                                                                key={description}>
-                                                                {description}
-                                                            </p>
-                                                        );
-                                                    })
-                                            }
                                         </p>
+                                        {
+                                            item.description
+                                                .map((description) => {
+                                                    return (
+                                                        <p
+                                                            key={description}>
+                                                            {description}
+                                                        </p>
+                                                    );
+                                                })
+                                        }
                                     </div>
                                     <div
                                         className="meta">

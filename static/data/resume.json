@@ -150,7 +150,7 @@
                 ],
                 "description": [
                     "Kevin developed websites, blogs, landing pages, and HTML emails for clients in the technology sector.",
-                    "He als performed SEO keyword research and optimization.",
+                    "He also performed SEO keyword research and optimization.",
                     "In addition to developing websites, he also trained clients on proper use, care, and customization of their website or blog through a CMS.",
                     "Not limited to digital, Kevin also aided in the fulfillment of dimensional mail campaigns (postage, shipping)."
                 ],
@@ -219,7 +219,9 @@
             ],
             "tech": [
                 "Adobe Creative Suite",
+                "AWS",
                 "Cargo",
+                "EC2",
                 "Emscripten",
                 "Flask",
                 "GCC",
@@ -233,6 +235,7 @@
                 "NPM",
                 "React",
                 "REST",
+                "S3",
                 "SVN",
                 "Ubuntu Linux",
                 "Vagrant",
