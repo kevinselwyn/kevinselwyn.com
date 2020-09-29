@@ -28,6 +28,20 @@
         ],
         "projects": [
             {
+                "name": "pkmnapi",
+                "url": "https://github.com/pkmn-api/pkmnapi",
+                "description": [
+                    "A Pokémon REST API that uses a Gen 1 Game Boy ROM as its data source.",
+                    "Designed, documented, and implemented a RESTful API service."
+                ],
+                "languages": [
+                    "Rust", "SQL"
+                ],
+                "tech": [
+                    "Cargo", "PostgreSQL", "Heroku", "Github Actions"
+                ]
+            },
+            {
                 "name": "Nessemble",
                 "url": "https://github.com/kevinselwyn/nessemble",
                 "description": [
@@ -53,20 +67,6 @@
                 ],
                 "tech": [
                     "Yarn", "NPM", "Webpack"
-                ]
-            },
-            {
-                "name": "LEGO Enhanced Graphics Object",
-                "url": "https://github.com/kevinselwyn/lego",
-                "description": [
-                    "A file format for representing 2D LEGO brick images.",
-                    "Building off practical experience with block-based file formats, this file format is simple and extensible."
-                ],
-                "languages": [
-                    "C"
-                ],
-                "tech": [
-                    "libpng", "libjpeg", "GCC"
                 ]
             },
             {
