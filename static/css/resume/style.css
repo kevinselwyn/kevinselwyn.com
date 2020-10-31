@@ -458,7 +458,7 @@ a:hover{
     }
 
     #intro {
-        margin-top:40px;
+        margin-top:0;
     }
 
     #intro .title{
@@ -504,7 +504,7 @@ a:hover{
         display:block;
     }
 
-    #employment, #education {
+    #education {
         page-break-before:always;
     }
 

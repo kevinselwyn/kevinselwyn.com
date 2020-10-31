@@ -86,6 +86,27 @@
         ],
         "employment": [
             {
+                "employer": "Capsule",
+                "title": "sr. frontend engineer",
+                "start": "2020",
+                "end": "present",
+                "links": [
+                    {
+                        "name": "Capsule",
+                        "url": "https://www.capsule.com/"
+                    }
+                ],
+                "description": [
+                    "Kevin is a Senior Frontend Engineer on the Logistics and Fulfillment Services team."
+                ],
+                "languages": [
+                    "JavaScript", "TypeScript", "HTML", "CSS", "SASS", "Python", "Bash"
+                ],
+                "tech": [
+                    "React", "NodeJS", "NPM", "Webpack", "Babel", "REST", "GraphQL", "Git", "Docker", "Make"
+                ]
+            },
+            {
                 "employer": "Amper Music",
                 "title": "sr. frontend engineer",
                 "start": "2016",
