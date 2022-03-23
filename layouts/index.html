@@ -11,7 +11,7 @@
   <style>
   {{ partialCached "critical.css" . | safeCSS }}
   </style>
-  {{ .Hugo.Generator }}
+  {{ hugo.Generator }}
 </head>
 <body>
   {{ partial "banner.html" . }}
