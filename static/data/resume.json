@@ -87,7 +87,7 @@
         "employment": [
             {
                 "employer": "Capsule",
-                "title": "sr. frontend engineer",
+                "title": "staff software engineer",
                 "start": "2020",
                 "end": "present",
                 "links": [
@@ -97,13 +97,15 @@
                     }
                 ],
                 "description": [
-                    "Kevin is a Senior Frontend Engineer on the Logistics and Fulfillment Services team."
+                    "Kevin is a Staff Software Engineer/Tech Lead on the Internal Operations team.",
+                    "He regularly works with stakeholders on the Product and Design teams to ensure that new product features are delivered fast and right.",
+                    "Kevin also helps lead a squad of engineers to ensure solid and lasting architectural decisions are made through in-depth technical specifications and code reviews."
                 ],
                 "languages": [
-                    "JavaScript", "TypeScript", "HTML", "CSS", "SASS", "Python", "Bash"
+                    "Python", "Kotlin", "Bash", "JavaScript", "TypeScript", "HTML", "CSS", "SASS"
                 ],
                 "tech": [
-                    "React", "NodeJS", "NPM", "Webpack", "Babel", "REST", "GraphQL", "Git", "Docker", "Make"
+                    "Django", "AWS", "Cognito", "SQS", "SNS", "CloudWatch", "DynamoDB", "S3", "React", "NodeJS", "NPM", "Webpack", "REST", "Git", "Docker", "Make"
                 ]
             },
             {
