@@ -102,10 +102,10 @@
                     "Kevin also helps lead a squad of engineers to ensure solid and lasting architectural decisions are made through in-depth technical specifications and code reviews."
                 ],
                 "languages": [
-                    "Python", "Kotlin", "Bash", "JavaScript", "TypeScript", "HTML", "CSS", "SASS"
+                    "Python", "PostgreSQL", "Kotlin", "Bash", "JavaScript", "TypeScript", "HTML", "CSS", "SASS"
                 ],
                 "tech": [
-                    "Django", "AWS", "Cognito", "SQS", "SNS", "CloudWatch", "DynamoDB", "S3", "React", "NodeJS", "NPM", "Webpack", "REST", "Git", "Docker", "Make"
+                    "Django", "AWS", "Cognito", "ElastiCache", "Elasticsearch", "RDS", "SQS", "SNS", "CloudWatch", "DynamoDB", "S3", "React","NodeJS", "NPM", "Webpack", "REST", "Git", "Docker", "Make", "Jenkins", "CodeFresh", "Prometheus", "Grafana", "Loki"
                 ]
             },
             {
