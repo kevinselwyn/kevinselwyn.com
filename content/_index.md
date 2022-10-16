@@ -1,11 +1,11 @@
 ---
 title: "Home"
-description: "I'm Kevin. I'm a Frontend Engineer."
+description: "I'm Kevin. I'm a Software Engineer."
 ---
 
 <img src="/img/kevin.jpg" title="Kevin" alt="Kevin" class="img img--left" />
 
-I'm Kevin. I'm a Frontend Engineer.
+I'm Kevin. I'm a Software Engineer.
 
 Here you will find random musings. Consume at your own risk.
 

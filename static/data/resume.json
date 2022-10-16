@@ -2,10 +2,10 @@
     "data": {
         "info": {
             "name": "Kevin Selwyn",
-            "title": "Frontend Engineer",
+            "title": "Software Engineer",
             "email": "kevinselwyn@gmail.com",
             "website": "https://kevinselwyn.com",
-            "profile": "Kevin is a highly motivated self-starter with 10+ years of professional web development and software development experience. He has a tenacious drive to learn and he has a passion for improving the user experience.",
+            "profile": "Kevin has 12+ years of professional software engineering experience. He has a tenacious drive to learn and he has a passion for improving both the user and developer experience.",
             "interests": "Kevin is passionate about music, The Office, The Legend of Zelda, and Corgis. He can grow a beard with great haste and loves singing and playing the guitar (poorly)."
         },
         "social": [
@@ -105,7 +105,7 @@
                     "Python", "PostgreSQL", "Kotlin", "Bash", "JavaScript", "TypeScript", "HTML", "CSS", "SASS"
                 ],
                 "tech": [
-                    "Django", "AWS", "Cognito", "ElastiCache", "Elasticsearch", "RDS", "SQS", "SNS", "CloudWatch", "DynamoDB", "S3", "React","NodeJS", "NPM", "Webpack", "REST", "Git", "Docker", "Make", "Jenkins", "CodeFresh", "Prometheus", "Grafana", "Loki"
+                    "Django", "AWS", "Cognito", "ElastiCache", "Elasticsearch", "RDS", "SQS", "SNS", "CloudWatch", "DynamoDB", "S3", "React","NodeJS", "NPM", "Webpack", "REST", "Git", "Docker", "Make", "Jenkins", "CodeFresh", "Prometheus", "Grafana", "Loki", "Terraform"
                 ]
             },
             {
