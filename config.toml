@@ -2,6 +2,7 @@ baseURL = ""
 languageCode = "en-us"
 title = "Kevin Selwyn"
 theme = "flex"
+disablePathToLower = true
 
 pygmentsCodefences = true
 pygmentsUseClassic = false

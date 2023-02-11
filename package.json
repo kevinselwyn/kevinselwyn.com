@@ -14,7 +14,7 @@
     "package": "yarn run package:html && yarn run package:xml && yarn run package:js && yarn run package:css && yarn run package:resume",
     "package:html": "find public -name '*.html' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
     "package:xml": "find public -name '*.xml' -exec html-minifier --collapse-whitespace --minify-css inline --minify-js inline {} --output {} \\;",
-    "package:js": "ENTRY=`find static/js -name '*.js' ! -name 'react*.min.js' ! -name 'prop-types*'` NODE_ENV=production webpack --mode=production",
+    "package:js": "ENTRY=`find static/js -name '*.js' ! -name 'react*.min.js' ! -name 'prop-types*' ! -name 'ReadNES*.js'` NODE_ENV=production webpack --mode=production",
     "package:css": "find public/css -name '*.css' -exec sh -c \"cat {} | cssmin > {}.tmp && mv {}.tmp {}\" \\;",
     "package:resume": "NODE_ENV=production webpack --mode=production --config resume-ssr.webpack.config.js && node resume-ssr.min.js",
     "deploy": "./deploy.sh",
