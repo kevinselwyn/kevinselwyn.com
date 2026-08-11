@@ -5,7 +5,7 @@
             "title": "Software Engineer",
             "email": "kevinselwyn@gmail.com",
             "website": "https://kevinselwyn.com",
-            "profile": "Kevin has 12+ years of professional software engineering experience. He has a tenacious drive to learn and he has a passion for improving both the user and developer experience.",
+            "profile": "Kevin has 15+ years of professional software engineering experience. He has a tenacious drive to learn and he has a passion for improving both the user and developer experience.",
             "interests": "Kevin is passionate about music, The Office, The Legend of Zelda, and Corgis. He can grow a beard with great haste and loves singing and playing the guitar (poorly)."
         },
         "social": [
@@ -20,13 +20,24 @@
             {
                 "network": "facebook",
                 "url": "https://www.facebook.com/KevinSelwyn"
-            },
-            {
-                "network": "youtube",
-                "url": "https://www.youtube.com/channel/UCkh-Uavq2a-Sbfxw3rJQS8A"
             }
         ],
         "projects": [
+            {
+                "name": "Nessemble",
+                "url": "https://github.com/kevinselwyn/nessemble-rs",
+                "description": [
+                    "A 6502 assembler for the Nintendo Entertainment System, written in Rust.",
+                    "A ground-up rewrite of an origional C assembler with a hand-written lexer, recursive-descent parser, and two-pass code generator supporting macros.",
+                    "Ships a LSP for editor integration and a WebAssembly build that assembles ROMs entirely client-side in the browser."
+                ],
+                "languages": [
+                    "Rust", "6502 Assembly", "WASM", "TypeScript", "JavaScript", "HTML", "CSS", "Bash"
+                ],
+                "tech": [
+                    "Cargo", "Language Server Protocol", "WebAssembly", "Docker", "GitHub Actions"
+                ]
+            },
             {
                 "name": "pkmnapi",
                 "url": "https://github.com/pkmn-api/pkmnapi",
@@ -42,20 +53,6 @@
                 ]
             },
             {
-                "name": "Nessemble",
-                "url": "https://github.com/kevinselwyn/nessemble",
-                "description": [
-                    "A 6502 assembler for the Nintendo Entertainment System.",
-                    "Challenges included creating a custom BNF grammar and compiling to WASM to run in the browser."
-                ],
-                "languages": [
-                    "C", "Lua", "Scheme", "JavaScript", "WASM", "6502 Assembly", "Python", "SQL"
-                ],
-                "tech": [
-                    "Flex", "Bison", "Flask", "Emscripten", "Vagrant", "Ubuntu Linux", "GCC", "MinGW", "MSI", "Valgrind", "Splint", "Yarn", "NPM"
-                ]
-            },
-            {
                 "name": "canvas-steg",
                 "url": "https://github.com/kevinselwyn/canvas-steg",
                 "description": [
@@ -68,28 +65,37 @@
                 "tech": [
                     "Yarn", "NPM", "Webpack"
                 ]
-            },
-            {
-                "name": "x-darksouls-y",
-                "url": "https://github.com/kevinselwyn/x-darksouls-y",
-                "description": [
-                    "Twitter bot that tells you what X is the Dark Souls of.",
-                    "This bot (posting exclusively to @x_darksouls_y) searches recent Tweets for the phrase \"is harder than\" and replaces it with \"is the Dark Souls of\"."
-                ],
-                "languages": [
-                    "Python"
-                ],
-                "tech": [
-                    "Heroku", "Flask", "Twitter API"
-                ]
             }
         ],
         "employment": [
             {
+                "employer": "Alloy",
+                "title": "sr. software engineer ii",
+                "start": "2023",
+                "end": "present",
+                "links": [
+                    {
+                        "name": "Alloy",
+                        "url": "https://www.alloy.com/"
+                    }
+                ],
+                "description": [
+                    "Kevin is a Senior Software Engineer on the GenAI squad, where he designs and builds the LLM and agentic platform behind Alloy's AI-assisted identity risk and fraud review products.",
+                    "He champions the use of Server-Sent Events for LLM response streaming and contributes heavily to Alloy's in-house agent harness and tool-calling framework as well as an evaluations framework for automatic prompt optimization and data-driven model selection.",
+                    "Kevin regularly works with stakeholders on Product and Design teams to scope and deliver features through in-depth technical specifications and code reviews."
+                ],
+                "languages": [
+                    "TypeScript", "JavaScript", "PostgreSQL", "HCL", "YAML", "Bash", "HTML", "CSS", "SASS"
+                ],
+                "tech": [
+                    "React", "NodeJS", "AWS", "Bedrock", "S3", "SQS", "Textract", "PostgreSQL", "Redis", "OpenSearch", "Snowflake", "Redshift", "Kubernetes", "Helm", "Terraform", "Docker", "Datadog", "REST", "Server-Sent Events", "Vite", "Storybook", "NPM", "Git", "GitHub Actions", "Figma"
+                ]
+            },
+            {
                 "employer": "Capsule",
                 "title": "staff software engineer",
                 "start": "2020",
-                "end": "present",
+                "end": "2023",
                 "links": [
                     {
                         "name": "Capsule",
@@ -97,9 +103,9 @@
                     }
                 ],
                 "description": [
-                    "Kevin is a Staff Software Engineer/Tech Lead on the Internal Operations team.",
-                    "He regularly works with stakeholders on the Product and Design teams to ensure that new product features are delivered fast and right.",
-                    "Kevin also helps lead a squad of engineers to ensure solid and lasting architectural decisions are made through in-depth technical specifications and code reviews."
+                    "Kevin was a Staff Software Engineer/Tech Lead on the Internal Operations team.",
+                    "He regularly worked with stakeholders on the Product and Design teams to ensure that new product features are delivered fast and right.",
+                    "Kevin also led a squad of engineers to ensure solid and lasting architectural decisions are made through in-depth technical specifications and code reviews."
                 ],
                 "languages": [
                     "Python", "PostgreSQL", "Kotlin", "Bash", "JavaScript", "TypeScript", "HTML", "CSS", "SASS"
@@ -218,53 +224,57 @@
         "skills": {
             "language": [
                 "6502 Assembly",
-                "ActionScript",
                 "Bash",
                 "C",
-                "C#",
-                "ColdFusion",
                 "CSS",
-                "Flash",
+                "HCL",
                 "HTML",
-                "HTML/CSS",
-                "Java",
                 "JavaScript",
+                "Kotlin",
                 "Lua",
                 "PHP",
                 "Python",
                 "Rust",
                 "SASS",
-                "Scheme",
                 "SQL",
-                "Swift",
                 "TypeScript",
-                "WASM"
+                "WASM",
+                "YAML"
             ],
             "tech": [
                 "Adobe Creative Suite",
                 "AWS",
+                "Bedrock",
                 "Cargo",
-                "EC2",
-                "Emscripten",
-                "Flask",
-                "GCC",
+                "Claude Code",
+                "Cursor",
+                "Datadog",
+                "Django",
+                "Docker",
+                "DynamoDB",
+                "Figma",
                 "Git",
-                "GraphQL",
-                "Haxe",
-                "Heroku",
+                "GitHub Actions",
+                "Helm",
+                "Kubernetes",
                 "Make",
-                "MySQL",
+                "MCP",
+                "NestJS",
                 "NodeJS",
                 "NPM",
+                "OpenSearch",
+                "PostgreSQL",
                 "React",
+                "Redis",
                 "REST",
                 "S3",
-                "SVN",
-                "Ubuntu Linux",
-                "Vagrant",
-                "Webpack",
-                "Wordpress",
-                "Yarn"
+                "Server-Sent Events",
+                "Snowflake",
+                "SQS",
+                "Storybook",
+                "Terraform",
+                "Vite",
+                "WebAssembly"
             ]
         }
     }
